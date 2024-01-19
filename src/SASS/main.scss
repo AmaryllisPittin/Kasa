@@ -1,0 +1,132 @@
+/***BREAKPOINT RESPONSIVE***/
+$breakpoint-desktop: 1024px;
+
+/***COLORS CONFIGURATION***/
+$main-color: #FF6060;
+$second-color:white;
+$third-color: #F6F6F6;
+
+/***GENERAL***/
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+ 
+    code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+    }
+
+    .navigation { 
+    margin-left:7%;
+    margin-right:7%;
+    width:86%;
+
+    &__logo-and-nav {
+        padding-top:42px;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        @media (max-width: $breakpoint-desktop) {
+            padding-top:15px;
+        }
+    }
+
+    &__nav a {
+        color: $main-color;
+        font-size:25px;
+        position:relative;
+        top:20px;
+        text-decoration: none;
+
+        &__nav a:hover {
+        text-decoration: underline;
+        }
+
+        @media (max-width: $breakpoint-desktop) {
+            font-size:13px;
+        }
+    }
+
+    &__nav-spacing {
+        padding-left:70px;
+        @media (max-width: $breakpoint-desktop) {
+            padding-left: 2em;
+        }
+    } 
+
+}
+
+.kasa-logo {
+    max-width:60%;
+    height:50px; 
+    @media (max-width: $breakpoint-desktop) {
+        padding-top: 5px;
+    }
+} 
+
+.navigation__nav a:hover {
+    text-decoration: underline;
+}
+
+.header-banner {
+    margin-top:50px;
+    width: 100%;
+    height: 222px;
+    border-radius:25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $breakpoint-desktop) {
+        height: 110px;
+        border-radius:12px;
+    }
+
+    &__img {
+        width: auto;
+        margin: 0 -15%;
+        filter:brightness(0.7);
+    }
+
+    &__title {
+        position:absolute;
+        color: $second-color;
+        font-weight:500;
+        font-size: 55px;
+
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 28px;
+            left: 15%;
+        }
+
+    }
+
+}
+
+/*************MainCards*************/
+
+.card-container {
+    margin-top: 50px;
+    display:grid;
+    grid-template-rows:repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height:750px;
+    margin-left:7%;
+    margin-right:7%;
+    padding:55px;
+    background-color: $third-color;
+    border-radius:25px;
+    column-gap: 5%;
+    row-gap: 10%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    background-color: $main-color;
+}
+
+
