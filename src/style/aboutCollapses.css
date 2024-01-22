@@ -1,0 +1,54 @@
+/***BREAKPOINT RESPONSIVE***/
+/***COLORS CONFIGURATION***/
+.collapse-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collapse-container__button {
+  background-color: #FF6060;
+  border: none;
+  text-align: left;
+  width: 70%;
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 5px;
+  color: #F6F6F6;
+  font-size: 27px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .collapse-container__button {
+    width: 90%;
+    height: 30px;
+  }
+}
+.collapse-container__presentation {
+  width: 70%;
+  background-color: #F6F6F6;
+  color: #FF6060;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .collapse-container__presentation {
+    width: 90%;
+  }
+}
+.collapse-container__text {
+  padding-left: 20px;
+}
+
+.fa-chevron-up {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .fa-chevron-up {
+    top: 4px;
+    right: 10px;
+  }
+}/*# sourceMappingURL=aboutCollapses.css.map */

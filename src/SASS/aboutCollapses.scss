@@ -1,0 +1,54 @@
+/***BREAKPOINT RESPONSIVE***/
+$breakpoint-desktop: 1024px;
+
+/***COLORS CONFIGURATION***/
+$main-color: #FF6060;
+$second-color:white;
+$third-color: #F6F6F6;
+
+.collapse-container {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    &__button {
+        background-color: $main-color;
+        border: none;
+        text-align:left;
+        width:70%;
+        height:50px;
+        padding-left:15px;
+        border-radius:5px;
+        color: $third-color;
+        font-size:27px;
+        position:relative;
+        @media (max-width: $breakpoint-desktop) {
+            width:90%;
+            height:30px;
+        }
+    }
+    &__presentation {
+        width:70%;
+        background-color: $third-color;
+        color: $main-color;
+        margin-bottom:30px;
+        border-radius: 5px;
+        font-size:20px;
+        @media (max-width: $breakpoint-desktop) {
+            width:90%;
+        }
+    }
+    &__text {
+        padding-left:20px;
+    }
+}
+
+.fa-chevron-up {
+    position:absolute;
+    right:20px;
+    top:12px;
+    cursor:pointer;
+    @media (max-width: $breakpoint-desktop) {
+        top:4px;
+        right:10px;
+    }
+}

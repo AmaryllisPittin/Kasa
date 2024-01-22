@@ -1,0 +1,41 @@
+/***BREAKPOINT RESPONSIVE***/
+$breakpoint-desktop: 1024px;
+
+/***COLORS CONFIGURATION***/
+$main-color: #FF6060;
+$second-color:white;
+$third-color: #F6F6F6;
+
+.body-error {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    @media (max-width: $breakpoint-desktop) {
+        text-align:center;
+    }
+    &__404 {
+    color: $main-color;
+    font-size:350px;
+    margin-bottom:50px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size:8em;
+    }
+    }
+    &__text {
+    color: $main-color;
+    font-size:40px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size:20px;
+        width:58%;
+    }
+    }
+    &__link {
+        color: $main-color;
+        font-size:20px;
+        margin-top:100px;
+        margin-bottom: 140px;
+        @media (max-width: $breakpoint-desktop) {
+            font-size:17px;
+        }
+    }
+}

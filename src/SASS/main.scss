@@ -63,6 +63,8 @@ body {
     height:50px; 
     @media (max-width: $breakpoint-desktop) {
         padding-top: 5px;
+        width:33%;
+        height:auto;
     }
 } 
 
@@ -72,6 +74,7 @@ body {
 
 .header-banner {
     margin-top:50px;
+    margin-bottom:30px;
     width: 100%;
     height: 222px;
     border-radius:25px;
@@ -80,6 +83,11 @@ body {
     justify-content: center;
     align-items: center;
     @media (max-width: $breakpoint-desktop) {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        margin-top:30px;
+        margin-bottom: 0;
         height: 110px;
         border-radius:12px;
     }
@@ -98,7 +106,8 @@ body {
 
         @media (max-width: $breakpoint-desktop) {
             font-size: 28px;
-            left: 15%;
+            left: 10%;
+            width:60%;
         }
 
     }
@@ -119,14 +128,63 @@ body {
     background-color: $third-color;
     border-radius:25px;
     column-gap: 5%;
-    row-gap: 10%;
+    row-gap: 6.7%;
+    @media (max-width: $breakpoint-desktop) {
+        display:flex;
+        flex-direction:column;
+        margin-top:0;
+        background-color: $second-color;
+        padding-top: 30px;
+        padding-left:0;
+        padding-bottom:0;
+        padding-right:0;
+        height:1750px;
+        row-gap:1%;
+        margin-bottom:30px;
+    }
 }
 
 .card {
     width: 100%;
     height: 100%;
     border-radius:10px;
-    background-color: $main-color;
+    background: linear-gradient($main-color, rgb(77, 76, 76) 150%);
+    display:flex;
+    align-items:flex-end;
+    @media (max-width: $breakpoint-desktop) {
+        height:300px;
+    }
+    &__h2 {
+        color:$second-color;
+        font-weight:400;
+        font-size:22px;
+        width:50%;
+        padding-left:20px;
+    }
+}
+
+.footer {
+    background-color: black;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    padding-top:65px;
+    padding-bottom:5px;
+    @media (max-width: $breakpoint-desktop) {
+        padding-bottom: 20px;
+    }
+    &__copyright {
+        color: $second-color;
+        font-weight:400;
+        font-size:27px;
+        @media (max-width: $breakpoint-desktop) {
+            font-size:14px;
+            width:35%;
+            padding-bottom:20px;
+        }
+    }
 }
 
 

@@ -1,0 +1,43 @@
+/***BREAKPOINT RESPONSIVE***/
+/***COLORS CONFIGURATION***/
+.body-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .body-error {
+    text-align: center;
+  }
+}
+.body-error__404 {
+  color: #FF6060;
+  font-size: 350px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .body-error__404 {
+    font-size: 8em;
+  }
+}
+.body-error__text {
+  color: #FF6060;
+  font-size: 40px;
+}
+@media (max-width: 1024px) {
+  .body-error__text {
+    font-size: 20px;
+    width: 58%;
+  }
+}
+.body-error__link {
+  color: #FF6060;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-bottom: 140px;
+}
+@media (max-width: 1024px) {
+  .body-error__link {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=error.css.map */
