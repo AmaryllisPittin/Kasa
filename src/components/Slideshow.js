@@ -1,20 +1,17 @@
 import React from "react";
-import logo from "../img/LOGO(1).png";
-import { NavLink } from "react-router-dom";
 
 const Slideshow = () => {
   return (
-    <div className="navigation">
-      <div className="navigation__logo-and-nav">
-        <img src={logo} className="kasa-logo" alt="logo de Kasa" />
-        <div className="navigation__nav">
-          <NavLink to="/">ACCUEIL</NavLink>
-          <NavLink to="/a-propos" className="navigation__nav-spacing">
-            A PROPOS
-          </NavLink>
-        </div>
-      </div>
-    </div>
+    <div id="slideshow">
+		<img className="arrow arrow_left" src="../../img/arrow-left.png" alt="flèche gauche du carousel" />
+		<img className="arrow arrow_right" src="../../img/arrow-right.png" alt="flèche droite du carousel" />
+		<div className="banner__all-img banner-img">
+
+		</div>
+		<div class="img-numbers">
+
+		</div>
+	</div>
   );
 };
 

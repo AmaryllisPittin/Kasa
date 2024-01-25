@@ -18,6 +18,10 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .navigation { 
     margin-left:7%;
     margin-right:7%;
@@ -186,5 +190,3 @@ body {
         }
     }
 }
-
-
