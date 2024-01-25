@@ -11,10 +11,12 @@ const CollapseRespect = () => {
 
   return (
     <div className="collapse-container">
-      <button className="collapse-container__button" onClick={toggleCollapse}>
+      <div className="collapse">
         Respect
-        <FontAwesomeIcon icon={faChevronUp} />
-      </button>
+        <button className="collapse__chevron" onClick={toggleCollapse}>
+          <FontAwesomeIcon icon={faChevronUp} />
+        </button>
+      </div>
       {!isCollapsed && (
         <div className="collapse-container__presentation">
           {/* Contenu à afficher lorsque l'élément n'est pas replié */}
