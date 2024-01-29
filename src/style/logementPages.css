@@ -1,0 +1,17 @@
+/***BREAKPOINT RESPONSIVE***/
+/***COLORS CONFIGURATION***/
+#slideshow {
+  width: 90%;
+  height: 415px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: red;
+  border-radius: 25px;
+  margin-top: 70px;
+}
+
+.logement-page-presentation__h1 {
+  color: #FF6060;
+  font-weight: 400;
+  font-size: 3em;
+}/*# sourceMappingURL=logementPages.css.map */
