@@ -5,7 +5,7 @@ import Slideshow from "../components/Slideshow";
 
 const StMartinLogement = () => {
   return (
-    <div>
+    <div id="1">
         <Navigation />
         <Slideshow />
         <Footer />

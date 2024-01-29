@@ -5,7 +5,7 @@ import Slideshow from "../components/Slideshow";
 
 const ArtistStudio = () => {
   return (
-    <div>
+    <div id="5">
         <Navigation />
         <Slideshow />
         <Footer />

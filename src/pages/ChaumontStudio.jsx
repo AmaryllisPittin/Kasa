@@ -5,7 +5,7 @@ import Slideshow from "../components/Slideshow";
 
 const ChaumontStudio = () => {
   return (
-    <div>
+    <div id="2">
         <Navigation />
         <Slideshow />
         <Footer />

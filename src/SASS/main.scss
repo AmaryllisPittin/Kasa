@@ -125,14 +125,14 @@ body {
     display:grid;
     grid-template-rows:repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    height:750px;
     margin-left:7%;
     margin-right:7%;
+    margin-bottom:50px;
     padding:55px;
     background-color: $third-color;
     border-radius:25px;
     column-gap: 5%;
-    row-gap: 6.7%;
+    row-gap: 50px;
     @media (max-width: $breakpoint-desktop) {
         display:flex;
         flex-direction:column;
@@ -148,9 +148,13 @@ body {
     }
 }
 
+.card-container a {
+    height:340px;
+}
+
 .card {
     width: 100%;
-    height: 100%;
+    height: 340px;
     border-radius:10px;
     background: linear-gradient($main-color, rgb(77, 76, 76) 150%);
     display:flex;

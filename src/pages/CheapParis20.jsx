@@ -3,9 +3,9 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Slideshow from "../components/Slideshow";
 
-const logement11 = () => {
+const CheapParis20 = () => {
   return (
-    <div id="3">
+    <div id="16">
         <Navigation />
         <Slideshow />
         <Footer />
@@ -13,4 +13,4 @@ const logement11 = () => {
   );
 };
 
-export default logement11;
+export default CheapParis20;

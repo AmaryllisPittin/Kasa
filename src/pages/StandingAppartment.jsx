@@ -5,7 +5,7 @@ import Slideshow from "../components/Slideshow";
 
 const StandingAppartment = () => {
   return (
-    <div>
+    <div id="4">
         <Navigation />
         <Slideshow />
         <Footer />
