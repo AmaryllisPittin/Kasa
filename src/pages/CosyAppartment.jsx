@@ -11,20 +11,23 @@ const CosyAppartment = () => {
   return (
     <div id="0">
         <Navigation />
-        <Slideshow />
-        {item && (
-          <div className="logement-page-presentation">
-            <h1 className="logement-page-presentation__h1">{item.title}</h1>
-            <div>{item.host.name}</div>
-            <div>{item.host.picture}</div>
+        <div className="main">
+          <Slideshow />
+          {item && (
+            <div className="logement-page-presentation">
+              <h1 className="logement-page-presentation__h1">{item.title}</h1>
+              <p className="logement-page-presentation__location">{item.location}</p>
+              <div className="profile"> {item.host.name}
+              <img src={item.host.picture} alt="Image de l'hôte" className="profile__img" />
+            </div>
             <div>{item.tags}</div>
             <div>{item.rating}</div>
-            <p>{item.location}</p>
-          </div>
+            </div>
             )}
             <CollapseDescription />
             <CollapseEquipment />
             <Footer />
+    </div>
     </div>
   );
 };

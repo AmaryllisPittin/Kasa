@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const arrowLeft = document.querySelector('.arrow_left');
 	const arrowRight = document.querySelector('.arrow_right');
 
-    let divCarousel = document.getElementById('slideshow');
+    let divCarousel = document.querySelector('banner-img');
     let firstImageCarousel = document.createElement('img');
 
     if (divCarousel && arrowRight) {
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             firstImageCarousel.src = firstImageOrder;
             firstImageCarousel.alt = "Première image de la bannière";
             divCarousel.appendChild(firstImageCarousel);
+			console.log(firstImageCarousel)
         } else {
             console.error("No image data found in data.json");
         }

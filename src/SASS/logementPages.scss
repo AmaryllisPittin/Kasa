@@ -6,13 +6,20 @@ $main-color: #FF6060;
 $second-color:white;
 $third-color: #F6F6F6;
 
+.main {
+    margin-left:7%;
+    margin-right:7%;
+    width:86%;
+}
+
 #slideshow {
-    width:90%;
     height:415px;
-    margin-left:5%;
-    margin-right:5%;
     border-radius: 25px;
     margin-top:70px;
+}
+
+.banner-img {
+    height:100%;
 }
 
 .logement-page-presentation {
@@ -20,5 +27,23 @@ $third-color: #F6F6F6;
         color: $main-color;
         font-weight:400;
         font-size:3em;
+        margin-bottom:0;
     }
+    &__location {
+        margin-top:0;
+        color: $main-color;
+        font-size:1.2em;
+    }
+}
+
+.profile {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    color: $main-color;
+    font-size:1.2em;
+&__img {
+    border-radius:70px;
+    padding-left:10px;
+}
 }

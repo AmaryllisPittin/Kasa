@@ -1,16 +1,41 @@
 /***BREAKPOINT RESPONSIVE***/
 /***COLORS CONFIGURATION***/
+.main {
+  margin-left: 7%;
+  margin-right: 7%;
+  width: 86%;
+}
+
 #slideshow {
-  width: 90%;
   height: 415px;
-  margin-left: 5%;
-  margin-right: 5%;
   border-radius: 25px;
   margin-top: 70px;
+}
+
+.banner-img {
+  height: 100%;
 }
 
 .logement-page-presentation__h1 {
   color: #FF6060;
   font-weight: 400;
   font-size: 3em;
+  margin-bottom: 0;
+}
+.logement-page-presentation__location {
+  margin-top: 0;
+  color: #FF6060;
+  font-size: 1.2em;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #FF6060;
+  font-size: 1.2em;
+}
+.profile__img {
+  border-radius: 70px;
+  padding-left: 10px;
 }/*# sourceMappingURL=logementPages.css.map */
