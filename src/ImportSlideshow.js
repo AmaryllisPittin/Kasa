@@ -1,10 +1,28 @@
 import DataTabs from "../src/data.json";
 import "../src/components/Slideshow";
 
-const NumberImgContainer = document.querySelector('.img-numbers');
-const imgBanner = document.querySelector(".banner__all-img");
-const arrowLeft = document.querySelector('.arrow_left');
-const arrowRight = document.querySelector('.arrow_right');
+document.addEventListener('DOMContentLoaded', function() {
+	const NumberImgContainer = document.querySelector('.img-numbers');
+	const imgBanner = document.querySelector(".banner__all-img");
+	const arrowLeft = document.querySelector('.arrow_left');
+	const arrowRight = document.querySelector('.arrow_right');
+
+    let divCarousel = document.getElementById('slideshow');
+    let firstImageCarousel = document.createElement('img');
+
+    if (divCarousel && arrowRight) {
+        if (DataTabs && DataTabs.length > 0) {
+            const firstImageOrder = DataTabs[0].pictures; 
+            firstImageCarousel.src = firstImageOrder;
+            firstImageCarousel.alt = "Première image de la bannière";
+            divCarousel.appendChild(firstImageCarousel);
+        } else {
+            console.error("No image data found in data.json");
+        }
+    } else {
+        console.error("Required elements not found");
+    }
+
 
 let currentIndex = 0;
 
@@ -48,3 +66,4 @@ arrowLeft.addEventListener('click', () => {
 createNumbers();
 updateCarouselContent();
 updateNumbers();
+});
