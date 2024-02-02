@@ -18,8 +18,8 @@ const CollapseEquipment = () => {
   }, [isCollapsed]);
 
   return (
-    <div className="collapse-container">
-      <div className="collapse">
+    <div className="collapse-container special-collapse-logement">
+      <div className="collapse collapse-size-logement collapse-equipment">
         Equipements
         <button className={`collapse__chevron ${chevronClass}`} onClick={toggleCollapse}>
           <FontAwesomeIcon icon={faChevronUp} />

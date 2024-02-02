@@ -4,8 +4,8 @@ import "../src/components/Slideshow";
 document.addEventListener('DOMContentLoaded', function() {
 	const NumberImgContainer = document.querySelector('.img-numbers');
 	const imgBanner = document.querySelector(".banner__all-img");
-	const arrowLeft = document.querySelector('.arrow_left');
-	const arrowRight = document.querySelector('.arrow_right');
+	const arrowLeft = document.querySelector('.arrow-left');
+	const arrowRight = document.querySelector('.arrow-right');
 
     let divCarousel = document.querySelector('banner-img');
     let firstImageCarousel = document.createElement('img');
@@ -24,12 +24,29 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Required elements not found");
     }
 
+	/***IMPORT DU TABLEAU D'IMAGES */
+		function getImagesById(itemId) {
+			const item = DataTabs.find(element => element.id === itemId);
+	  
+			if (item) {
+		  	return item.pictures;
+			} else {
+		  	console.error(`Aucun élément trouvé avec l'ID ${itemId}`);
+		  	return []; 
+			}
+	  	}
+	  
+	  	const itemId = "c67ab8a7"; 
+	  	const images = getImagesById(itemId);
+	  	divCarousel.appendChild(images)
+
 
 let currentIndex = 0;
 
 function updateCarouselContent() {
-	imgBanner.innerHTML = `<img src=${DataTabs[currentIndex].pictures} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
+	imgBanner.innerHTML = `<img src=${DataTabs[currentIndex].pictures[0]} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
 }
+console.log('les images sont ajoutées')
 
 function createNumbers() {
 	for (let i=0; i < DataTabs.length; i++) {

@@ -1,18 +1,25 @@
 import React from "react";
-import "../ImportSlideshow"
+import ImportSlideShow from "../ImportSlideshow";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Slideshow = () => {
   return (
     <div id="slideshow">
-		<img className="arrow arrow_left" src="../img/arrow-left.png" alt="flèche gauche du carousel" />
-		<img className="arrow arrow_right" src="../img/arrow-right.png" alt="flèche droite du carousel" />
-		<div className="banner__all-img banner-img">
-
-		</div>
-		<div className="img-numbers">
-
-		</div>
-	</div>
+      <button className={`slideshow-arrow arrow-left`}>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      <button className={`slideshow-arrow arrow-right`}>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+      
+      <div className="banner__all-img banner-img">
+	  	<ImportSlideShow />
+      </div>
+      <div className="img-numbers">
+        {/* Content for image numbers */}
+      </div>
+    </div>
   );
 };
 
