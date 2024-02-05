@@ -22,6 +22,11 @@ $third-color: #F6F6F6;
 	width: 100%;
 	min-height: 470px;
 	position: relative;
+    @media (max-width: $breakpoint-desktop) {
+        height:260px;
+        min-height:0;
+        margin-top:40px;
+    }
 }
 
 .slideshow-arrow {
@@ -30,15 +35,18 @@ $third-color: #F6F6F6;
     border:none;
     font-size:90px;
     position:absolute;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 23px;
+    }
 }
 
 .arrow-left {
-    left:20px;
+    left:2%;
     cursor:pointer;
 }
 
 .arrow-right {
-    right:20px;
+    right:2%;
     cursor: pointer;
 }
 
@@ -52,6 +60,10 @@ $third-color: #F6F6F6;
     object-fit: cover;
     object-position: center;
     border-radius: 25px;
+    @media (max-width: $breakpoint-desktop) {
+        height:260px;
+        border-radius:9px;
+    }
 
 }
 
@@ -59,6 +71,9 @@ $third-color: #F6F6F6;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
+    @media (max-width: $breakpoint-desktop) {
+        flex-direction: column;
+    }
 }
 
 .title-and-location {
@@ -69,11 +84,19 @@ $third-color: #F6F6F6;
         font-weight:400;
         font-size:3em;
         margin-bottom:0;
+        @media (max-width: $breakpoint-desktop) {
+            font-size:1.5em;
+            margin-top:5px;
+        }
     }
     &__location {
         margin-top:0;
         color: $main-color;
         font-size:1.2em;
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 1em;
+            margin-top:5px;
+        }
     }
 }
 
@@ -81,6 +104,12 @@ $third-color: #F6F6F6;
     display:flex;
     flex-direction:column;
     margin-top:40px;
+    @media (max-width: $breakpoint-desktop) {
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        margin-top:0;
+    }
 }
 
 .profile {
@@ -89,21 +118,39 @@ $third-color: #F6F6F6;
     align-items:center;
     color: $main-color;
     font-size:1.2em;
-&__img {
-    border-radius:50px;
-    margin-left:10px;
-    width:65px;
-}
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 1em;
+        margin-top:10px;
+    }
+    &__img {
+        border-radius:50px;
+        margin-left:10px;
+        width:65px;
+        @media (max-width: $breakpoint-desktop) {
+            width:40px;
+        }
+    }
 }
 
 .rating {
     margin-top:20px;
     font-size:25px;
     color: #E3E3E3;
+    width:200px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 23px;
+        display:flex;
+        flex-direction: row;
+        font-size: 13px;
+    }
 }
 
 .fa-star {
     padding-left:10px;
+    @media (max-width: $breakpoint-desktop) {
+        padding-right: 6px;
+        padding-left:0;
+    }
 }
 
 .logement-tags-container {
@@ -120,9 +167,16 @@ $third-color: #F6F6F6;
     height:24px;
     border-radius:10px;
     margin-bottom:24px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 0.7em;
+        height:15px;
+        padding-bottom:3px;
+        margin-bottom: 0;
+        border-radius:5px;
+    }
 }
 
-.first-tag {
+.margin-tag {
     margin-right:10px;
 }
 
@@ -131,21 +185,53 @@ $third-color: #F6F6F6;
     flex-direction:row;
     justify-content: space-between;
     margin-bottom:20px;
+    @media (max-width: $breakpoint-desktop) {
+        flex-direction:column;
+        margin-top:15px;
+    }
+}
+
+.collapse-container__presentation-logement {
+    width:92%;
+    background-color: $third-color;
+    color: $main-color;
+    border-radius: 5px;
+    font-size:20px;
+    height:80px;
+    overflow:hidden;
+    margin-right:6%;
+    @media (max-width: $breakpoint-desktop) {
+        margin-right: 0;
+    }
 }
 
 .special-collapse-logement {
     width:100%;
+    @media (max-width: $breakpoint-desktop) {
+        margin-bottom:20px;
+    }
 }
 
 .collapse-size-logement {
     width:91%;
     border-radius:10px;
+    @media (max-width: $breakpoint-desktop) {
+        border-radius:5px;
+        font-size:1em;
+    }
 }
 
 .collapse-equipment {
     margin-left:40px;
+    margin-right:0;
+    @media (max-width: $breakpoint-desktop) {
+        margin-left:0;
+    }
 }
 
 .collapse-description {
     margin-right:40px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-right:0;
+    }
 }

@@ -27,7 +27,6 @@ const CollapseReliability = () => {
       </div>
       {!isCollapsed && (
         <div ref={contentRef} className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`} >
-          {/* Contenu à afficher lorsque l'élément n'est pas replié */}
           <p className="collapse-container__text">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
         </div>
       )}

@@ -63,7 +63,7 @@ a {
 @media (max-width: 1024px) {
   .kasa-logo {
     padding-top: 5px;
-    width: 33%;
+    width: 43%;
     height: auto;
   }
 }
@@ -182,7 +182,7 @@ a {
 }
 @media (max-width: 1024px) {
   .footer {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 }
 .footer__copyright {

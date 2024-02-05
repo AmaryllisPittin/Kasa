@@ -14,7 +14,7 @@ const Slideshow = () => {
       </button>
       
       <div className="banner__all-img banner-img">
-	  	<ImportSlideShow />
+        <ImportSlideShow />
       </div>
       <div className="img-numbers">
         {/* Content for image numbers */}

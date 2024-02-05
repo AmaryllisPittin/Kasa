@@ -5,9 +5,9 @@ import Slideshow from "../components/Slideshow";
 import dataTab from "../data.json";
 import CollapseEquipment from "../components/collapses/CollapseEquipment";
 import CollapseDescription from "../components/collapses/CollapseDescription";
+import StarRating from "../components/StarRating";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 library.add(faStar);
 
@@ -24,7 +24,7 @@ const CosyAppartment = () => {
                 <h1 className="title-and-location__h1">{item.title}</h1>
                 <p className="title-and-location__location">{item.location}</p>
                 <div className="logement-tags-container">
-                  <div className="logement-tag first-tag">{item.tags[0]}</div>
+                  <div className="logement-tag margin-tag">{item.tags[0]}</div>
                   <div className="logement-tag">{item.tags[1]}</div>
                 </div>
               </div>
@@ -34,18 +34,14 @@ const CosyAppartment = () => {
                     <img src={item.host.picture} alt="Image de l'hôte" className="profile__img" />
                   </div>
                   <div className="rating">
-                  <FontAwesomeIcon icon={['fas', 'star']} />
-                  <FontAwesomeIcon icon={['fas', 'star']} />
-                  <FontAwesomeIcon icon={['fas', 'star']} />
-                  <FontAwesomeIcon icon={['fas', 'star']} />
-                  <FontAwesomeIcon icon={['fas', 'star']} />
+                  <StarRating rating={item.rating} />
                   </div>
                 </div>
                 </div>
             )}
             <div className="collapse-logement">
-              <CollapseDescription /> 
-              <CollapseEquipment />
+              <CollapseDescription description={item && item.description} />
+              <CollapseEquipment equipments={item && item.equipments} />
             </div>
           </div>
     <Footer />

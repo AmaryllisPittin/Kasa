@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const CollapseEquipment = () => {
+const CollapseEquipment = ({ equipments }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const chevronClass = isCollapsed ? '' : 'rotated';
   const contentRef = useRef(null);
@@ -26,9 +26,12 @@ const CollapseEquipment = () => {
         </button>
       </div>
       {!isCollapsed && (
-        <div ref={contentRef} className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`} >
-          {/* Contenu à afficher lorsque l'élément n'est pas replié */}
-          <p className="collapse-container__text"></p>
+        <div ref={contentRef} className={`collapse-container__presentation-logement collapse-equipment ${isCollapsed ? '' : 'open'}`} >
+          <p className="collapse-container__text">
+          {equipments && equipments.map((equipment, index) => (
+              <div key={index} className="equipment">{equipment}</div>
+            ))}
+          </p>
         </div>
       )}
     </div>

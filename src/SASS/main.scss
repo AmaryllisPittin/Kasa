@@ -67,7 +67,7 @@ body {
     height:50px; 
     @media (max-width: $breakpoint-desktop) {
         padding-top: 5px;
-        width:33%;
+        width:43%;
         height:auto;
     }
 } 
@@ -181,7 +181,7 @@ body {
     padding-top:65px;
     padding-bottom:5px;
     @media (max-width: $breakpoint-desktop) {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
     &__copyright {
         color: $second-color;
