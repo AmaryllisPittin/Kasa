@@ -5,7 +5,7 @@ const ImportSlideShow = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        const divCarousel = document.querySelector('.banner-img');
+        /*const divCarousel = document.querySelector('.banner-img');*/
         const NumberImgContainer = document.querySelector('.img-numbers');
         const imgBanner = document.querySelector(".banner__all-img");
         const arrowLeft = document.querySelector('.arrow-left');
@@ -59,20 +59,21 @@ const ImportSlideShow = () => {
     return (
         <div id="slideshow">
             <button className={`slideshow-arrow arrow-left`}>
-                {/* Flèche gauche */}
+
             </button>
             <button className={`slideshow-arrow arrow-right`}>
-                {/* Flèche droite */}
+
             </button>
 
             <div className="banner__all-img banner-img">
-                {/* Contenu du diaporama */}
+
             </div>
             <div className="img-numbers">
-                {/* Contenu pour les numéros d'image */}
+
             </div>
         </div>
     );
 };
 
 export default ImportSlideShow;
+

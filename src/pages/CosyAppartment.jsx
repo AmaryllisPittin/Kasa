@@ -17,7 +17,7 @@ const CosyAppartment = () => {
     <div id="0">
         <Navigation />
         <div className="main">
-          <Slideshow />
+          <Slideshow pictures={item.pictures} />
           {item && (
             <div className="logement-page-presentation">
               <div className="title-and-location">

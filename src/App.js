@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -52,6 +52,38 @@ const App = () => {
       <Route path="/Magnifique-appartement-Rivoli" element={<Rivoli />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </Router>
+  );
+};
+
+export default App;*/
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import dataTab from "../src/data.json";
+import PageComponent from "../src/components/PageComponent";
+import Index from "../src/pages/Index";
+import NotFound from "../src/components/NotFound";
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        {/* Route pour la page d'accueil */}
+        <Route path="/" element={<Index />} />
+
+        {/* Routes pour chaque page générée */}
+        {dataTab.map(item => (
+          <Route
+            key={item.id}
+            path={`/${item.slug}`}
+            element={<PageComponent item={item} />}
+          />
+        ))}
+
+        {/* Route pour la page NotFound (404) */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 };
