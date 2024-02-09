@@ -16,16 +16,9 @@ const ImportSlideShow = () => {
         }*/
 
         function updateCarouselContent() {
-            if (DataTabs[currentIndex] && DataTabs[currentIndex].pictures) {
-                const carouselImages = DataTabs[currentIndex].pictures.map((imageUrl, index) => (
-                    `<img key=${index} src=${imageUrl} alt="DataTab ${currentIndex + 1}" class="banner-img">`
-                ));
-                imgBanner.innerHTML = carouselImages.join('');
-            } else {
-                imgBanner.innerHTML = ''; // Clear the carousel if no images found
-            }
+            imgBanner.innerHTML = `<img src=${DataTabs[currentIndex].pictures[0]} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
         }
-        
+
         function createNumbers() {
             for (let i = 0; i < DataTabs.length; i++) {
                 let numberElement = document.createElement("p");

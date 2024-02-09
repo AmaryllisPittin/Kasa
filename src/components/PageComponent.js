@@ -11,13 +11,13 @@ import StarRating from "../components/StarRating";
 const PageComponent = () => {
   const { id } = useParams(); // Récupérer l'ID de l'URL
   const item = dataTab.find(item => item.id === id); // Filtrer les données correspondant à l'ID
-  const slideshowImages = item && item.pictures ? item.pictures : [];
+
 
   return (
     <div>
       <Navigation />
       <div className="main">
-        <Slideshow images={slideshowImages} />
+        <Slideshow />
         {item && (
           <div className="logement-page-presentation">
             <div className="title-and-location">
