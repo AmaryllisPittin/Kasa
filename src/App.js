@@ -69,19 +69,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Route pour la page d'accueil */}
         <Route path="/" element={<Index />} />
 
-        {/* Routes pour chaque page générée */}
-        {dataTab.map(item => (
-          <Route
-            key={item.id}
-            path={`/${item.slug}`}
-            element={<PageComponent item={item} />}
-          />
-        ))}
+        <Route path="/logement/:id" element={<PageComponent data={dataTab} />} />
 
-        {/* Route pour la page NotFound (404) */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
