@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import DataTabs from "../src/data.json";
 
-const ImportSlideShow = () => {
+const ImportSlideShow = ({parentId}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const filteredDataTabs = DataTabs.filter(item => item.parentId === parentId).slice(0,5);
 
     useEffect(() => {
         /*const divCarousel = document.querySelector('.banner-img');*/
@@ -11,12 +12,11 @@ const ImportSlideShow = () => {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
 
-        /*function updateCarouselContent() {
-            imgBanner.innerHTML = `<img src=${DataTabs[currentIndex].pictures[0]} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
-        }*/
-
         function updateCarouselContent() {
-            imgBanner.innerHTML = `<img src=${DataTabs[currentIndex].pictures[0]} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
+            if (filteredDataTabs.length > 0) {
+                const imgUrl = filteredDataTabs[currentIndex % filteredDataTabs.length].pictures[0];
+                imgBanner.innerHTML = `<img src=${imgUrl} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
+            }
         }
 
         function createNumbers() {
@@ -58,7 +58,7 @@ const ImportSlideShow = () => {
             arrowRight.removeEventListener('click', changeDataTab);
             arrowLeft.removeEventListener('click', changeDataTab);
         };
-    }, [currentIndex]);
+    }, [currentIndex, filteredDataTabs]);
 
     return (
         <div id="slideshow">
@@ -80,4 +80,5 @@ const ImportSlideShow = () => {
 };
 
 export default ImportSlideShow;
+
 

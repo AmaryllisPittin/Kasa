@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import dataTab from "../data.json";
 import Navigation from "../components/Navigation";
@@ -9,15 +9,30 @@ import CollapseDescription from "../components/collapses/CollapseDescription";
 import StarRating from "../components/StarRating";
 
 const PageComponent = () => {
-  const { id } = useParams(); // Récupérer l'ID de l'URL
-  const item = dataTab.find(item => item.id === id); // Filtrer les données correspondant à l'ID
+  const { id } = useParams();
+  const [currentIndex, setCurrentIndex] = useState(0); // Déclaration de l'état currentIndex
+  const [bannerImages, setBannerImages] = useState([]);
+  const item = dataTab.find((item) => item.id === id);
 
+  useEffect(() => {
+    if (item) {
+      setBannerImages(item.pictures || []);
+    }
+  }, [item]);
+
+  const handleIndexChange = (index) => {
+    setCurrentIndex(index);
+  };
 
   return (
     <div>
       <Navigation />
       <div className="main">
-        <Slideshow />
+        <Slideshow
+          bannerImages={bannerImages}
+          currentIndex={currentIndex}
+          onIndexChange={handleIndexChange}
+        />
         {item && (
           <div className="logement-page-presentation">
             <div className="title-and-location">
