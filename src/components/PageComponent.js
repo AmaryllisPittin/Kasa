@@ -14,6 +14,7 @@ const PageComponent = () => {
   const [bannerImages, setBannerImages] = useState([]);
   const item = dataTab.find((item) => item.id === id);
 
+
   useEffect(() => {
     if (item) {
       setBannerImages(item.pictures || []);
@@ -29,6 +30,7 @@ const PageComponent = () => {
       <Navigation />
       <div className="main">
         <Slideshow
+          parentId={id}
           bannerImages={bannerImages}
           currentIndex={currentIndex}
           onIndexChange={handleIndexChange}

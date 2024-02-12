@@ -3,7 +3,8 @@ import DataTabs from "../src/data.json";
 
 const ImportSlideShow = ({parentId}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const filteredDataTabs = DataTabs.filter(item => item.parentId === parentId).slice(0,5);
+    const filteredDataTabs = DataTabs.filter(item => item.parentId === parentId).slice(0, 5);
+
 
     useEffect(() => {
         /*const divCarousel = document.querySelector('.banner-img');*/
