@@ -29,12 +29,7 @@ import StarRating from "../components/StarRating";
     <div>
       <Navigation />
       <div className="main">
-        <Slideshow
-          parentId={id}
-          bannerImages={bannerImages}
-          currentIndex={currentIndex}
-          onIndexChange={handleIndexChange}
-        />
+        <Slideshow parentId={id} bannerImages={bannerImages} currentIndex={currentIndex} onIndexChange={handleIndexChange} />
         {item && (
           <div className="logement-page-presentation">
             <div className="title-and-location">
