@@ -8,7 +8,7 @@ import CollapseEquipment from "../components/collapses/CollapseEquipment";
 import CollapseDescription from "../components/collapses/CollapseDescription";
 import StarRating from "../components/StarRating";
 
-const PageComponent = () => {
+ const PageComponent = () => {
   const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0); // Déclaration de l'état currentIndex
   const [bannerImages, setBannerImages] = useState([]);
