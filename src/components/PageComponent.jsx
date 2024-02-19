@@ -7,12 +7,12 @@ import Slideshow from "./Slideshow";
 import CollapseEquipment from "./collapses/CollapseEquipment";
 import CollapseDescription from "./collapses/CollapseDescription";
 import StarRating from "./StarRating";
+import Tags from "./Tags";
 
  const PageComponent = () => {
   const { id } = useParams();
   const item = dataTab.find((item) => item.id === id);
   const picturesData = dataTab.find((picturesData) => picturesData.id === id);
-  console.log(picturesData)
 
   return (
     <div>
@@ -24,10 +24,7 @@ import StarRating from "./StarRating";
             <div className="title-and-location">
               <h1 className="title-and-location__h1">{item.title}</h1>
               <p className="title-and-location__location">{item.location}</p>
-              <div className="logement-tags-container">
-                <div className="logement-tag margin-tag">{item.tags[0]}</div>
-                <div className="logement-tag">{item.tags[1]}</div>
-              </div>
+              <Tags />
             </div>
             <div className="profile-and-stars-container">
               <div className="profile"> 

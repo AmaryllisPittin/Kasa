@@ -45,6 +45,7 @@ const Slideshow = () => {
         <ImportSlideShow />
       </div>
       <div className="img-numbers">
+
       </div>
     </div>
   );

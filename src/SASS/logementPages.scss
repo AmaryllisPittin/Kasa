@@ -67,6 +67,13 @@ $third-color: #F6F6F6;
 
 }
 
+.img-numbers {
+    position:absolute;
+    bottom:30px;
+    color: $second-color;
+    font-size:1.2em;
+}
+
 .logement-page-presentation {
     display:flex;
     flex-direction:row;
@@ -161,6 +168,7 @@ $third-color: #F6F6F6;
 .logement-tag {
     color:$second-color;
     background-color: #FF6060;
+    margin-right:10px;
     padding-left:20px;
     padding-right:20px;
     padding-top:3px;
@@ -174,10 +182,6 @@ $third-color: #F6F6F6;
         margin-bottom: 0;
         border-radius:5px;
     }
-}
-
-.margin-tag {
-    margin-right:10px;
 }
 
 .collapse-logement {
