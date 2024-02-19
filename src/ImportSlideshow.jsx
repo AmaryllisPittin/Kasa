@@ -1,0 +1,176 @@
+/*import React, { useEffect, useState } from "react";
+import DataTabs from "./data.json";
+
+const ImportSlideShow = ({parentId}) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const specificObject = DataTabs.find(item => item.parentId === parentId);
+    const picturesOfSpecificObject = specificObject ? specificObject.pictures : [];
+    console.log(picturesOfSpecificObject);
+
+
+    useEffect(() => {
+        /*const divCarousel = document.querySelector('.banner-img');*/
+        /*const NumberImgContainer = document.querySelector('.img-numbers');
+        const imgBanner = document.querySelector(".banner__all-img");
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+
+        function updateCarouselContent() {
+            if (picturesOfSpecificObject.length > 0) {
+                const imgUrl = picturesOfSpecificObject[currentIndex % picturesOfSpecificObject.length];
+                imgBanner.innerHTML = `<img src=${imgUrl} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
+            }
+        }
+
+
+
+        function createNumbers() {
+            for (let i = 0; i < DataTabs.length; i++) {
+                let numberElement = document.createElement("p");
+                numberElement.classList.add("number");
+                NumberImgContainer.appendChild(numberElement);
+            }
+        }
+
+        function updateNumbers() {
+            const numberElements = document.querySelectorAll('.number');
+            numberElements.forEach((number, index) => {
+                number.classList.toggle('number_selected', index === currentIndex);
+            });
+        }
+
+        function changeDataTab(direction) {
+            if (direction === 'right') {
+                setCurrentIndex((currentIndex + 1) % DataTabs.length);
+            } else {
+                setCurrentIndex((currentIndex - 1 + DataTabs.length) % DataTabs.length);
+            }
+        }
+
+        arrowRight.addEventListener('click', () => {
+            changeDataTab('right');
+        });
+
+        arrowLeft.addEventListener('click', () => {
+            changeDataTab('left');
+        });
+
+        createNumbers();
+        updateCarouselContent();
+        updateNumbers();
+
+        return () => {
+            arrowRight.removeEventListener('click', changeDataTab);
+            arrowLeft.removeEventListener('click', changeDataTab);
+        };
+    });
+
+    return (
+        <div id="slideshow">
+            <button className={`slideshow-arrow arrow-left`}>
+
+            </button>
+            <button className={`slideshow-arrow arrow-right`}>
+
+            </button>
+
+            <div className="banner__all-img banner-img">
+
+            </div>
+            <div className="img-numbers">
+
+            </div>
+        </div>
+    );
+};
+
+export default ImportSlideShow;*/
+
+
+import React, { useEffect, useState } from "react";
+import DataTabs from "./data.json";
+import { useParams } from "react-router-dom";
+
+const ImportSlideShow = () => {
+    const { id } = useParams();
+    const picturesData = DataTabs.find((item) => item.id === id)?.pictures;
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+
+    useEffect(() => {
+        
+        const NumberImgContainer = document.querySelector('.img-numbers');
+        const imgBanner = document.querySelector(".banner__all-img");
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+
+        function updateCarouselContent() {
+            if (picturesData.length > 0) {
+                const imgUrl = picturesData[currentIndex % picturesData.length];
+                imgBanner.innerHTML = `<img src=${imgUrl} alt="DataTab ${currentIndex + 1}" class="banner-img">`;
+            }
+        }
+
+
+
+        function createNumbers() {
+            for (let i = 0; i < DataTabs.length; i++) {
+                let numberElement = document.createElement("p");
+                numberElement.classList.add("number");
+                NumberImgContainer.appendChild(numberElement);
+            }
+        }
+
+        function updateNumbers() {
+            const numberElements = document.querySelectorAll('.number');
+            numberElements.forEach((number, index) => {
+                number.classList.toggle('number_selected', index === currentIndex);
+            });
+        }
+
+        function changeDataTab(direction) {
+            if (direction === 'right') {
+                setCurrentIndex((currentIndex + 1) % DataTabs.length);
+            } else {
+                setCurrentIndex((currentIndex - 1 + DataTabs.length) % DataTabs.length);
+            }
+        }
+
+        arrowRight.addEventListener('click', () => {
+            changeDataTab('right');
+        });
+
+        arrowLeft.addEventListener('click', () => {
+            changeDataTab('left');
+        });
+
+        createNumbers();
+        updateCarouselContent();
+        updateNumbers();
+
+        return () => {
+            arrowRight.removeEventListener('click', changeDataTab);
+            arrowLeft.removeEventListener('click', changeDataTab);
+        };
+    });
+
+    return (
+        <div id="slideshow">
+            <button className={`slideshow-arrow arrow-left`}>
+
+            </button>
+            <button className={`slideshow-arrow arrow-right`}>
+
+            </button>
+
+            <div className="banner__all-img banner-img">
+
+            </div>
+            <div className="img-numbers">
+
+            </div>
+        </div>
+    );
+};
+
+export default ImportSlideShow;

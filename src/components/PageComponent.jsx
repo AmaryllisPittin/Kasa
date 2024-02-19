@@ -1,4 +1,4 @@
-/*import React, { useState, useEffect } from "react";
+/*import React, { useState, useEffect } from "react";*/
 import { useParams } from "react-router-dom";
 import dataTab from "../data.json";
 import Navigation from "./Navigation";
@@ -10,26 +10,15 @@ import StarRating from "./StarRating";
 
  const PageComponent = () => {
   const { id } = useParams();
-  const [currentIndex, setCurrentIndex] = useState(0); // Déclaration de l'état currentIndex
-  const [bannerImages, setBannerImages] = useState([]);
   const item = dataTab.find((item) => item.id === id);
-
-
-  useEffect(() => {
-    if (item) {
-      setBannerImages(item.pictures || []);
-    }
-  }, [item]);
-
-  const handleIndexChange = (index) => {
-    setCurrentIndex(index);
-  };
+  const picturesData = dataTab.find((picturesData) => picturesData.id === id);
+  console.log(picturesData)
 
   return (
     <div>
       <Navigation />
       <div className="main">
-        <Slideshow parentId={id} bannerImages={bannerImages} currentIndex={currentIndex} onIndexChange={handleIndexChange} />
+        <Slideshow parentId={id} picturesData={picturesData} />
         {item && (
           <div className="logement-page-presentation">
             <div className="title-and-location">
@@ -61,10 +50,10 @@ import StarRating from "./StarRating";
   );
 };
 
-export default PageComponent;*/
+export default PageComponent;
 
-import { useParams } from "react-router-dom";
-import "../data.json";
+/*import { useParams } from "react-router-dom";
+import data from "../data.json";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Slideshow from "./Slideshow";
@@ -72,7 +61,7 @@ import CollapseEquipment from "./collapses/CollapseEquipment";
 import CollapseDescription from "./collapses/CollapseDescription";
 import StarRating from "./StarRating";
 
- const PageComponent = ({ data }) => {
+ const PageComponent = () => {
   const { id } = useParams();
   const pageData = data.find((pageData) => pageData.id === id);
 
@@ -80,7 +69,7 @@ import StarRating from "./StarRating";
     <div>
       <Navigation />
       <div className="main">
-        <Slideshow pictures={pageData.pictures} />
+        <Slideshow data={data.pictures} />
         {pageData && (
           <div className="logement-page-presentation">
             <div className="title-and-location">
@@ -112,4 +101,4 @@ import StarRating from "./StarRating";
   );
 };
 
-export default PageComponent;
+export default PageComponent;*/

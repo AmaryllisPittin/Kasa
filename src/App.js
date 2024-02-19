@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import dataTab from "../src/data.json";
 import PageComponent from "../src/components/PageComponent";
 import Index from "../src/pages/Index";
+import About from "../src/pages/About";
 import NotFound from "../src/components/NotFound";
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/a-propos" element={<About />} />
 
         <Route path="/logement/:id" element={<PageComponent data={dataTab} />} />
 
