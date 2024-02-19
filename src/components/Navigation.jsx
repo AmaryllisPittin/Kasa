@@ -9,9 +9,9 @@ const Navigation = () => {
       <div className="navigation__logo-and-nav">
         <img src={logo} className="kasa-logo" alt="logo de Kasa" />
         <div className="navigation__nav">
-          <NavLink to="/">Accueil</NavLink>
+          <NavLink to="/">ACCUEIL</NavLink>
           <NavLink to="/a-propos" className="navigation__nav-spacing">
-            A propos
+            A PROPOS
           </NavLink>
         </div>
       </div>

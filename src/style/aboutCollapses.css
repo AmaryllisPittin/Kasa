@@ -6,6 +6,12 @@
   align-items: center;
   margin-bottom: 30px;
 }
+@media (max-width: 1024px) {
+  .collapse-container {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+}
 .collapse-container__presentation {
   width: 70%;
   background-color: #F6F6F6;
@@ -30,6 +36,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .collapse-security-margin-bottom {
+    margin-bottom: 20px;
+  }
+}
+
 .collapse {
   background-color: #FF6060;
   border: none;
@@ -46,8 +58,9 @@
 }
 @media (max-width: 1024px) {
   .collapse {
-    width: 90%;
+    width: 84%;
     height: 30px;
+    font-size: 100%;
   }
 }
 .collapse__chevron {
@@ -63,7 +76,7 @@
 @media (max-width: 1024px) {
   .collapse__chevron {
     top: 4px;
-    right: 10px;
+    right: 8px;
   }
 }
 
@@ -72,7 +85,7 @@
 }
 @media (max-width: 1024px) {
   .fa-chevron-up {
-    font-size: 23px;
+    font-size: 140%;
   }
 }
 
