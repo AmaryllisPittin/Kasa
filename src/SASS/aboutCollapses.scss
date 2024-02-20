@@ -85,10 +85,6 @@ $third-color: #F6F6F6;
     }
 }
 
-/*.open {
-    height: auto;
-  }*/
-
 .rotated {
     transform: rotate(-180deg);
 }
@@ -100,31 +96,9 @@ $third-color: #F6F6F6;
   /*ANIMATIONS*/
 
   .collapse-checkbox:checked ~ .collapse-container__presentation {
-    /*height: auto;*/
     animation: height drawerOpen 0.3s forwards;
   }
 
   .collapse-checkbox:not(:checked) ~ .collapse-container__presentation {
-    /*height: auto;*/
     animation: drawerClose 0.3s forwards;
   }
-
-  /*@keyframes drawerOpen {
-    0% {
-      height: 0;
-    }
-  
-    100% {
-      height: auto;
-    }
-  }
-  
-  /*@keyframes drawerClose {
-    0% {
-      height: auto;
-    }
-  
-    100% {
-      height: 0;
-    }
-  }*/

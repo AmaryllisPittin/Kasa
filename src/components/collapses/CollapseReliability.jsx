@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,27 +9,25 @@ const CollapseReliability = () => {
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
-  };
-
-  useEffect(() => {
     if (contentRef.current) {
-      contentRef.current.style.height = isCollapsed ? '0' : `${contentRef.current.scrollHeight}px`;
+      contentRef.current.style.height = isCollapsed ? `${contentRef.current.scrollHeight}px` : '0';
     }
-  }, [isCollapsed]);
+  };
 
   return (
     <div className="collapse-container">
-      <div className="collapse">
+      <input type="checkbox" id="collapseCheckboxReliability" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
+      <label htmlFor="collapseCheckboxReliability" className="collapse">
         Fiabilité
-        <button className={`collapse__chevron ${chevronClass}`} onClick={toggleCollapse}>
-          <FontAwesomeIcon icon={faChevronUp} />
-        </button>
+        <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
+      </label>
+      <div
+        ref={contentRef}
+        className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`}
+        style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }}
+      >
+        <p className="collapse-container__text">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
       </div>
-      {!isCollapsed && (
-        <div ref={contentRef} className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`} >
-          <p className="collapse-container__text">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
-        </div>
-      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,33 +9,37 @@ const CollapseEquipment = ({ equipments }) => {
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
-  };
-
-  useEffect(() => {
     if (contentRef.current) {
-      contentRef.current.style.height = isCollapsed ? '0' : `${contentRef.current.scrollHeight}px`;
+      contentRef.current.style.height = isCollapsed ? `${contentRef.current.scrollHeight}px` : '0';
     }
-  }, [isCollapsed]);
+  };
 
   return (
     <div className="collapse-container special-collapse-logement">
-      <div className="collapse collapse-size-logement collapse-equipment">
-        Equipements
-        <button className={`collapse__chevron ${chevronClass}`} onClick={toggleCollapse}>
-          <FontAwesomeIcon icon={faChevronUp} />
-        </button>
-      </div>
-      {!isCollapsed && (
-        <div ref={contentRef} className={`collapse-container__presentation-logement collapse-equipment ${isCollapsed ? '' : 'open'}`} >
+      <input type="checkbox" id="collapseCheckboxEquipment" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
+      <label htmlFor="collapseCheckboxEquipment" className="collapse collapse-size-logement collapse-equipment">
+        Equipement
+        <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
+      </label>
+      <div
+        ref={contentRef}
+        className={`collapse-container__equipment ${isCollapsed ? '' : 'open'}`}
+        style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }}
+      >
           <p className="collapse-container__text">
           {equipments && equipments.map((equipment, index) => (
               <div key={index} className="equipment">{equipment}</div>
             ))}
           </p>
         </div>
-      )}
     </div>
   );
 };
 
 export default CollapseEquipment;
+
+/*<p className="collapse-container__text">
+{equipments && equipments.map((equipment, index) => (
+    <div key={index} className="equipment">{equipment}</div>
+  ))}
+</p>*/

@@ -239,3 +239,35 @@ $third-color: #F6F6F6;
         margin-right:0;
     }
 }
+
+.collapse-container__description {
+    position:relative;
+    right:20px;
+    width:92%;
+    background-color: $third-color;
+    color: $main-color;
+    border-radius: 5px;
+    font-size:20px;
+    height:0;
+    overflow:hidden;
+    transition: height 0.3s ease-out;
+    @media (max-width: $breakpoint-desktop) {
+        width:90%;
+    }
+}
+
+.collapse-container__equipment {
+    position:relative;
+    left:20px;
+    width:92%;
+    background-color: $third-color;
+    color: $main-color;
+    border-radius: 5px;
+    font-size:20px;
+    height:0;
+    overflow:hidden;
+    transition: height 0.3s ease-out;
+    @media (max-width: $breakpoint-desktop) {
+        width:90%;
+    }
+}
