@@ -3,7 +3,7 @@ $breakpoint-desktop: 1024px;
 
 /***COLORS CONFIGURATION***/
 $main-color: #FF6060;
-$second-color:white;
+$second-color: white;
 $third-color: #F6F6F6;
 
 .collapse-container {
@@ -23,7 +23,7 @@ $third-color: #F6F6F6;
         font-size:20px;
         height:0;
         overflow:hidden;
-        transition: max-height 0.5s;
+        transition: height 0.3s ease-out;
         @media (max-width: $breakpoint-desktop) {
             width:90%;
         }
@@ -85,10 +85,46 @@ $third-color: #F6F6F6;
     }
 }
 
+/*.open {
+    height: auto;
+  }*/
+
 .rotated {
     transform: rotate(-180deg);
 }
 
-.open {
-    height:auto; 
+  .visually-hidden {
+    display:none;
   }
+
+  /*ANIMATIONS*/
+
+  .collapse-checkbox:checked ~ .collapse-container__presentation {
+    /*height: auto;*/
+    animation: height drawerOpen 0.3s forwards;
+  }
+
+  .collapse-checkbox:not(:checked) ~ .collapse-container__presentation {
+    /*height: auto;*/
+    animation: drawerClose 0.3s forwards;
+  }
+
+  /*@keyframes drawerOpen {
+    0% {
+      height: 0;
+    }
+  
+    100% {
+      height: auto;
+    }
+  }
+  
+  /*@keyframes drawerClose {
+    0% {
+      height: auto;
+    }
+  
+    100% {
+      height: 0;
+    }
+  }*/

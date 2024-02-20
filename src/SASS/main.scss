@@ -3,7 +3,7 @@ $breakpoint-desktop: 1024px;
 
 /***COLORS CONFIGURATION***/
 $main-color: #FF6060;
-$second-color:white;
+$second-color: white;
 $third-color: #F6F6F6;
 
 /***GENERAL***/
@@ -111,7 +111,7 @@ body {
         font-size: 55px;
 
         @media (max-width: $breakpoint-desktop) {
-            font-size: 28px;
+            font-size: 27px;
             left: 10%;
             width:60%;
         }
