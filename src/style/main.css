@@ -1,5 +1,7 @@
 /***BREAKPOINT RESPONSIVE***/
-/***COLORS CONFIGURATION***/
+/***STYLES***/
+/**DIMENSIONS & SPACING**/
+/**MERGING**/
 /***GENERAL***/
 body {
   margin: 0;
@@ -22,10 +24,10 @@ a {
   width: 86%;
 }
 .navigation__logo-and-nav {
-  padding-top: 42px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 42px;
 }
 @media (max-width: 1024px) {
   .navigation__logo-and-nav {

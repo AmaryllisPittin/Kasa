@@ -1,5 +1,7 @@
 /***BREAKPOINT RESPONSIVE***/
 /***COLORS CONFIGURATION***/
+/***Recherche de variables**/
+/****************************/
 .collapse-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
 }
 @media (max-width: 1024px) {
   .collapse-container {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 20px;
   }
 }

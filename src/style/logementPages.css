@@ -1,5 +1,8 @@
 /***BREAKPOINT RESPONSIVE***/
 /***COLORS CONFIGURATION***/
+/***DIMENSIONS & SPACING**/
+/***MERGING***/
+/******************************/
 .main {
   margin-left: 7%;
   margin-right: 7%;
@@ -83,6 +86,7 @@
 }
 @media (max-width: 1024px) {
   .logement-page-presentation {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -212,6 +216,7 @@
 }
 @media (max-width: 1024px) {
   .collapse-logement {
+    display: flex;
     flex-direction: column;
     margin-top: 15px;
   }
@@ -265,6 +270,7 @@
 
 .collapse-description {
   margin-right: 40px;
+  z-index: 2;
 }
 @media (max-width: 1024px) {
   .collapse-description {
@@ -275,6 +281,8 @@
 .collapse-container__description {
   position: relative;
   right: 20px;
+  top: -5px;
+  z-index: 1;
   width: 92%;
   background-color: #F6F6F6;
   color: #FF6060;

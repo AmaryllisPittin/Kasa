@@ -6,12 +6,19 @@ $main-color: #FF6060;
 $second-color:white;
 $third-color: #F6F6F6;
 
-.body-error {
+$center-value:center;
+@mixin display-flex-and-column {
     display:flex;
-    flex-direction: column;
-    align-items:center;
+    flex-direction:column;
+}
+
+/********************************/
+
+.body-error {
+    @include display-flex-and-column;
+    align-items:$center-value;
     @media (max-width: $breakpoint-desktop) {
-        text-align:center;
+        text-align:$center-value;
     }
     &__404 {
     color: $main-color;
