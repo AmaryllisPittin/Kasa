@@ -70,7 +70,6 @@ $center-value:center;
 
 .slideshow-arrow {
     background-color:transparent;
-    color: $second-color;
     border:none;
     font-size:90px;
     position:$second-position;
@@ -109,7 +108,6 @@ $center-value:center;
 .img-numbers {
     position:$second-position;
     bottom:30px;
-    color: $second-color;
     font-size:$main-font-size;
 }
 
@@ -123,7 +121,6 @@ $center-value:center;
 .title-and-location {
     @include display-flex-and-column;
     &__h1 {
-        color: $main-color;
         font-weight:400;
         font-size:3em;
         margin-bottom:$zero-value;
@@ -134,7 +131,6 @@ $center-value:center;
     }
     &__location {
         margin-top:$zero-value;
-        color: $main-color;
         font-size:$main-font-size;
         @media (max-width: $breakpoint-desktop) {
             font-size: $standard-font-size;
@@ -157,7 +153,6 @@ $center-value:center;
 .profile {
     @include display-flex-and-row;
     align-items:$center-value;
-    color: $main-color;
     font-size:$main-font-size;
     @media (max-width: $breakpoint-desktop) {
         font-size: $standard-font-size;
@@ -198,7 +193,6 @@ $center-value:center;
 }
 
 .logement-tag {
-    color:$second-color;
     background-color: #FF6060;
     margin-right:10px;
     padding-left:20px;
@@ -227,8 +221,6 @@ $center-value:center;
 
 .collapse-container__presentation-logement {
     width:92%;
-    background-color: $third-color;
-    color: $main-color;
     border-radius: $minimal-px;
     font-size:20px;
     height:80px;
@@ -277,8 +269,6 @@ $center-value:center;
     top:-5px;
     z-index:1;
     width:$fourth-width;
-    background-color: $third-color;
-    color: $main-color;
     border-radius:$minimal-px;
     font-size:20px;
     height:$zero-value;
@@ -293,8 +283,6 @@ $center-value:center;
     position:$main-position;
     left:20px;
     width:$fourth-width;
-    background-color: $third-color;
-    color: $main-color;
     border-radius: $minimal-px;
     font-size:20px;
     height:$zero-value;

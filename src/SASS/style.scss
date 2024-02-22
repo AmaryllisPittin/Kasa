@@ -1,16 +1,97 @@
 /***BREAKPOINT RESPONSIVE***/
 $breakpoint-desktop: 1024px;
 
-/***STYLES***/
+/***COLOR VALUES***/
 $main-color: #FF6060;
 $second-color: white;
 $third-color: #F6F6F6;
+
+/***COLORS***/
+
+.navigation__nav a,
+.collapse-container__presentation,
+.body-error__404,
+.body-error__text,
+.body-error__link,
+.title-and-location__h1,
+.title-and-location__location,
+.profile,
+.collapse-container__presentation-logement,
+.collapse-container__description,
+.collapse-container__equipment {
+    color: $main-color;
+}
+
+.header-banner__title,
+.card__h2,
+.footer__copyright,
+.collapse__chevron,
+.slideshow-arrow,
+.img-numbers,
+.logement-tag {
+    color: $second-color;
+}
+
+.collapse {
+    color: $third-color;
+}
+
+/***BACKGROUND-COLORS***/
+
+.collapse {
+    background-color: $main-color;
+}
+
+.card-container {
+    background-color: $third-color;
+    @media (max-width: $breakpoint-desktop) {
+        background-color: $second-color;
+    }
+}
+
+.collapse-container__presentation,
+.collapse-container__presentation-logement,
+.collapse-container__description,
+.collapse-container__equipment {
+    background-color: $third-color;
+}
+
+/***FONT-STYLES VALUES***/
 
 $main-text-decoration: none;
 $second-text-decoration: underline;
 
 $standard-font-size:1em;
 $main-font-size: 1.2em;
+
+/***FONT-STYLES***/
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+    }
+
+a,
+.navigation__nav a {
+    text-decoration:$main-text-decoration;
+}
+
+.navigation__nav a:hover {
+    text-decoration: $second-text-decoration;
+}
+
+
+
+
+
+
+
+
 
 /**DIMENSIONS & SPACING**/
 $main-width: 86%;
@@ -50,17 +131,6 @@ $center-value:center;
 /***GENERAL***/
 body {
     margin: $zero-value;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
- 
-    code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
-    }
-
-    a {
-        text-decoration:$main-text-decoration;
     }
 
     .navigation { 
@@ -77,15 +147,9 @@ body {
     }
 
     &__nav a {
-        color: $main-color;
         font-size:25px;
         position:$main-position;
         top:20px;
-        text-decoration: $main-text-decoration;
-
-        &__nav a:hover {
-        text-decoration: $second-text-decoration;
-        }
 
         @media (max-width: $breakpoint-desktop) {
             font-size:90%;
@@ -110,10 +174,6 @@ body {
         height:$height-auto;
     }
 } 
-
-.navigation__nav a:hover {
-    text-decoration: $second-text-decoration;
-}
 
 .header-banner {
     margin-top:50px;
@@ -145,7 +205,6 @@ body {
 
     &__title {
         position:$second-position;
-        color: $second-color;
         font-weight:500;
         font-size: 55px;
 
@@ -170,14 +229,12 @@ body {
     margin-right:$main-margin;
     margin-bottom:50px;
     padding:55px;
-    background-color: $third-color;
     border-radius:25px;
     column-gap: 5%;
     row-gap: 50px;
     @media (max-width: $breakpoint-desktop) {
         @include display-flex-and-column;
         margin-top:$zero-value;
-        background-color: $second-color;
         padding-top: 30px;
         padding-left:$zero-value;
         padding-bottom:$zero-value;
@@ -221,7 +278,6 @@ body {
         height:260px;
     }
     &__h2 {
-        color:$second-color;
         font-weight:400;
         font-size:22px;
         width:50%;
@@ -242,7 +298,6 @@ body {
         padding-bottom: 30px;
     }
     &__copyright {
-        color: $second-color;
         font-weight:400;
         font-size:27px;
         @media (max-width: $breakpoint-desktop) {

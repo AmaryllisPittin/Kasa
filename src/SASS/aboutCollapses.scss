@@ -36,8 +36,6 @@ $center-value: center;
     }
     &__presentation {
         width:70%;
-        background-color: $third-color;
-        color: $main-color;
         border-radius: $minimal-px;
         font-size:20px;
         height:$zero-value;
@@ -62,14 +60,12 @@ $center-value: center;
 }
 
 .collapse {
-    background-color: $main-color;
     border: none;
     text-align:left;
     width:70%;
     height:50px;
     padding-left:15px;
     border-radius:$minimal-px;
-    color: $third-color;
     font-size:27px;
     position:$main-position;
     display:flex;
@@ -86,7 +82,6 @@ $center-value: center;
         top:12px;
         border:none;
         background-color: transparent;
-        color:$second-color;
         cursor:pointer;
         transition: transform 0.5s ;
         @media (max-width: $breakpoint-desktop) {

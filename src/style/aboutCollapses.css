@@ -16,8 +16,6 @@
 }
 .collapse-container__presentation {
   width: 70%;
-  background-color: #F6F6F6;
-  color: #FF6060;
   border-radius: 5px;
   font-size: 20px;
   height: 0;
@@ -45,14 +43,12 @@
 }
 
 .collapse {
-  background-color: #FF6060;
   border: none;
   text-align: left;
   width: 70%;
   height: 50px;
   padding-left: 15px;
   border-radius: 5px;
-  color: #F6F6F6;
   font-size: 27px;
   position: relative;
   display: flex;
@@ -71,7 +67,6 @@
   top: 12px;
   border: none;
   background-color: transparent;
-  color: white;
   cursor: pointer;
   transition: transform 0.5s;
 }

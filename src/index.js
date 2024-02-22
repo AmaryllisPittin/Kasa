@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import "../src/style/main.css"
+import "../src/style/style.css"
 import "../src/style/aboutCollapses.css"
 import "../src/style/error.css"
 import "../src/style/logementPages.css"
