@@ -1,0 +1,189 @@
+/***BREAKPOINT RESPONSIVE***/
+$breakpoint-desktop: 1024px;
+
+/**MERGING VALUES**/
+$main-position: relative;
+$second-position: absolute;
+
+$main-object-fit: cover;
+$main-modified-overflow: hidden;
+$center-value:center;
+
+@mixin display-row-configuration {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+@mixin display-flex-and-row {
+    display:flex;
+    flex-direction:row;
+}
+
+@mixin display-flex-and-column {
+    display:flex;
+    flex-direction:column;
+}
+
+/***POSITIONS***/
+
+.collapse,
+#slideshow,
+.collapse-container__description,
+.collapse-container__equipment,
+.navigation__nav a,
+.card {
+    position:$main-position;
+}
+
+.collapse__chevron,
+.slideshow-arrow,
+.img-numbers,
+.header-banner__title,
+.card::before {
+    position: $second-position;
+}
+
+/***DIVERSES MERGING***/
+
+.banner__all-img,
+.banner-img {
+    object-fit:$main-object-fit;
+}
+
+.collapse-container__presentation,
+.collapse-container__presentation-logement,
+.collapse-container__description,
+.collapse-container__equipment {
+    overflow:$main-modified-overflow;
+}
+
+/***ALIGN-ITEMS***/
+
+.collapse-container,
+.collapse,
+#slideshow,
+.profile,
+.body-error,
+.header-banner,
+.footer {
+    align-items:$center-value;
+}
+
+/***JUSTIFY-CONTENT***/
+
+#slideshow,
+.footer,
+.header-banner {
+    justify-content: $center-value;
+}
+
+/***TEXT-ALIGN***/
+
+.body-error {
+    @media (max-width: $breakpoint-desktop) {
+        text-align:$center-value;
+    }
+}
+
+.footer {
+    text-align: $center-value;
+}
+
+/***MIXINS***/
+
+.logement-page-presentation,
+.collapse-logement,
+.navigation__logo-and-nav {
+    @include display-row-configuration;
+}
+
+#slideshow,
+.profile,
+.logement-tags-container {
+    @include display-flex-and-row;
+}
+
+.rating {
+    @media (max-width: $breakpoint-desktop) {
+        @include display-flex-and-row;
+    }
+}
+
+.collapse-container,
+.title-and-location,
+.profile-and-stars-container,
+.body-error,
+.footer {
+    @include display-flex-and-column;
+}
+
+.logement-page-presentation,
+.collapse-logement,
+.card-container {
+    @media (max-width: $breakpoint-desktop) {
+        @include display-flex-and-column;
+    }
+}
+
+
+
+/********************************/
+
+.header-banner {
+    overflow: $main-modified-overflow;
+    display: flex;
+}
+
+.card-container {
+    display:grid;
+    grid-template-rows:repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-container a {
+    z-index:3;
+}
+
+.card {
+    display:flex;
+    align-items:flex-end;
+    background-size: cover;
+    background-position:$center-value;
+    z-index:2;
+    &::before {
+        z-index: 1;
+    }
+    &__h2 {
+        z-index:2;
+    }
+}
+
+.banner-img {
+    object-position: $center-value;
+}
+
+.body-error {
+    &__404 {
+    font-size:350px;
+    margin-bottom:50px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size:8em;
+    }
+    }
+    &__text {
+    font-size:40px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size:20px;
+        width:58%;
+    }
+    }
+    &__link {
+        font-size:20px;
+        margin-top:100px;
+        margin-bottom: 140px;
+        @media (max-width: $breakpoint-desktop) {
+            font-size:17px;
+        }
+    }
+}

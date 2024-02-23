@@ -1,0 +1,322 @@
+/***BREAKPOINT RESPONSIVE***/
+$breakpoint-desktop: 1024px;
+
+
+/***DIMENSIONS VALUES**/
+$main-margin: 7%;
+
+$main-width: 86%;
+$second-width:100%;
+$third-width: 90%;
+$fourth-width:92%;
+
+/***DIVERSES VALUES***/
+$height-auto: auto;
+$zero-value: 0;
+$minimal-px: 5px;
+/**********************************/
+
+$main-position: relative;
+$second-position: absolute;
+
+$main-modified-overflow: hidden;
+$center-value: center;
+
+@mixin display-flex-and-column {
+    display:flex;
+    flex-direction:column;
+}
+
+/***MARGIN DIMENSIONS***/
+.main,
+.navigation,
+.header-banner,
+.card-container {
+    margin-left:$main-margin;
+    margin-right:$main-margin;
+}
+
+/***WIDTH DIMENSIONS***/
+.main,
+.navigation,
+.header-banner {
+    width:$main-width;
+}
+
+#slideshow,
+.banner-img,
+.special-collapse-logement,
+.card {
+    width: $second-width;
+}
+
+.collapse-container__presentation,
+.collapse-container__description,
+.collapse-container__equipment {
+    @media (max-width: $breakpoint-desktop) {
+        width:$third-width;
+    }
+}
+
+.collapse-container__description,
+.collapse-container__equipment {
+    width:$fourth-width;
+}
+
+
+
+
+
+
+
+/****************************/
+
+body {
+    margin: $zero-value;
+    }
+
+.navigation {  
+    &__logo-and-nav {
+        padding-top:42px;
+        @media (max-width: $breakpoint-desktop) {
+            padding-top:15px;
+        }
+    }
+    &__nav a {
+        top:20px;
+    }
+    
+    &__nav-spacing {
+        padding-left:70px;
+        @media (max-width: $breakpoint-desktop) {
+            padding-left: 2em;
+        }
+    } 
+}
+
+.kasa-logo {
+    max-width:60%;
+    height:50px; 
+    @media (max-width: $breakpoint-desktop) {
+        padding-top: $minimal-px;
+        max-width:43%;
+        height:$height-auto;
+    }
+}
+
+.header-banner {
+    margin-top:50px;
+    margin-bottom:30px;
+    height: 222px;
+    border-radius:25px;
+    @media (max-width: $breakpoint-desktop) {
+        width:88%;
+        margin-left:6%;
+        margin-right:6%;
+        margin-top:30px;
+        margin-bottom: $zero-value;
+        height:110px;
+        border-radius:12px;
+    }
+    &__img {
+        width: auto;
+        margin: $zero-value -15%;
+    }
+    &__title {
+        @media (max-width: $breakpoint-desktop) {
+            left: 10%;
+            width:60%;
+        }
+    }
+}
+
+.card-container {
+    margin-top: 50px;
+    margin-bottom:50px;
+    padding:55px;
+    border-radius:25px;
+    column-gap: 5%;
+    row-gap: 50px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-top:$zero-value;
+        padding-top: 30px;
+        padding-left:$zero-value;
+        padding-bottom:$zero-value;
+        padding-right:$zero-value;
+        row-gap: 20px;
+        margin-bottom:30px;
+    }
+}
+
+.card-container a {
+    height:340px;
+    border-radius:10px;
+    @media (max-width: $breakpoint-desktop) {
+        height:260px;
+    }
+}
+
+.card {
+    height: 340px;
+    border-radius:10px;
+    &::before {
+        content: "";
+        top: $zero-value;
+        right: $zero-value;
+        bottom: $zero-value;
+        left: $zero-value;
+        border-radius:10px;
+    }
+    @media (max-width: $breakpoint-desktop) {
+        height:260px;
+    }
+    &__h2 {
+        width:50%;
+        padding-left:20px;
+    }
+}
+
+#slideshow {
+    height:415px;
+    margin-top:70px;
+	min-height: 470px;
+    @media (max-width: $breakpoint-desktop) {
+        height:260px;
+        min-height:$zero-value;
+        margin-top:40px;
+    }
+}
+
+.arrow-left {
+    left:2%;
+}
+
+.arrow-right {
+    right:2%;
+}
+
+.banner-img {
+    height: 100%;
+    border-radius: 25px;
+    @media (max-width: $breakpoint-desktop) {
+        height:260px;
+        border-radius:9px;
+    }
+
+}
+
+.img-numbers {
+    bottom:30px;
+}
+
+.title-and-location {
+    &__h1 {
+        margin-bottom:$zero-value;
+        @media (max-width: $breakpoint-desktop) {
+            margin-top:$minimal-px;
+        }
+    }
+    &__location {
+        margin-top:$zero-value;
+        @media (max-width: $breakpoint-desktop) {
+            margin-top:$minimal-px;
+        }
+    }
+}
+
+.collapse-container {
+    margin-bottom:30px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-bottom:$zero-value;
+        margin-top:20px;
+    }
+    &__presentation {
+        width:70%;
+        border-radius: $minimal-px;
+        font-size:20px;
+        height:$zero-value;
+        transition: height 0.3s ease-out;
+    }
+    &__text {
+        padding-left:20px;
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.collapse-security-margin-bottom {
+    @media (max-width: $breakpoint-desktop) {
+        margin-bottom:20px;
+    }
+}
+
+.collapse {
+    border: none;
+    text-align:left;
+    width:70%;
+    height:50px;
+    padding-left:15px;
+    border-radius:$minimal-px;
+    font-size:27px;
+    display:flex;
+    @media (max-width: $breakpoint-desktop) {
+        width:84%;
+        height:30px;
+        font-size:100%;
+    }
+
+    &__chevron {
+        right:20px;
+        top:12px;
+        border:none;
+        background-color: transparent;
+        cursor:pointer;
+        transition: transform 0.5s ;
+        @media (max-width: $breakpoint-desktop) {
+            top:4px;
+            right:8px;
+            
+        }
+    }
+}
+
+.fa-chevron-up {
+    font-size: 25px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 140%;
+    }
+}
+
+.rotated {
+    transform: rotate(-180deg);
+}
+
+  .visually-hidden {
+    display:none;
+  }
+
+  /*ANIMATIONS*/
+
+  .collapse-checkbox:checked ~ .collapse-container__presentation {
+    animation: height drawerOpen 0.3s forwards;
+  }
+
+  .collapse-checkbox:not(:checked) ~ .collapse-container__presentation {
+    animation: drawerClose 0.3s forwards;
+  }
+
+
+  .footer {
+    padding-top:65px;
+    padding-bottom:$minimal-px;
+    @media (max-width: $breakpoint-desktop) {
+        padding-bottom: 30px;
+    }
+    &__copyright {
+        @media (max-width: $breakpoint-desktop) {
+            width:35%;
+            padding-bottom:20px;
+        }
+    }
+  }

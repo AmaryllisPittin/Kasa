@@ -85,225 +85,89 @@ a,
     text-decoration: $second-text-decoration;
 }
 
+/***FONT-SIZES***/
 
-
-
-
-
-
-
-
-/**DIMENSIONS & SPACING**/
-$main-width: 86%;
-$main-margin: 7%;
-$second-width:100%;
-$third-width: 90%;
-$fourth-width:92%;
-
-$height-auto: auto;
-$zero-value: 0;
-$minimal-px: 5px;
-
-/**MERGING**/
-$main-position: relative;
-$second-position: absolute;
-
-$main-object-fit: cover;
-$main-modified-overflow: hidden;
-$center-value:center;
-
-@mixin display-row-configuration {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
+.title-and-location__location,
+.profile,
+.collapse-size-logement {
+    @media (max-width: $breakpoint-desktop) {
+        font-size: $standard-font-size;
+    }
 }
 
-@mixin display-flex-and-row {
-    display:flex;
-    flex-direction:row;
+.img-numbers,
+.title-and-location__location,
+.profile {
+    font-size:$main-font-size;
 }
 
-@mixin display-flex-and-column {
-    display:flex;
-    flex-direction:column;
-}
+
 
 /***GENERAL***/
-body {
-    margin: $zero-value;
-    }
 
-    .navigation { 
-    margin-left:$main-margin;
-    margin-right:$main-margin;
-    width:$main-width; 
-
-    &__logo-and-nav {
-        @include display-row-configuration;
-        padding-top:42px;
-        @media (max-width: $breakpoint-desktop) {
-            padding-top:15px;
-        }
-    }
-
+.navigation {  
     &__nav a {
         font-size:25px;
-        position:$main-position;
-        top:20px;
-
         @media (max-width: $breakpoint-desktop) {
             font-size:90%;
         }
     }
-
-    &__nav-spacing {
-        padding-left:70px;
-        @media (max-width: $breakpoint-desktop) {
-            padding-left: 2em;
-        }
-    } 
-
-}
-
-.kasa-logo {
-    max-width:60%;
-    height:50px; 
-    @media (max-width: $breakpoint-desktop) {
-        padding-top: $minimal-px;
-        max-width:43%;
-        height:$height-auto;
-    }
 } 
 
 .header-banner {
-    margin-top:50px;
-    margin-bottom:30px;
-    margin-left:$main-margin;
-    margin-right:$main-margin;
-    width: $main-width;
-    height: 222px;
-    border-radius:25px;
-    overflow: $main-modified-overflow;
-    display: flex;
-    justify-content: $center-value;
-    align-items: $center-value;
-    @media (max-width: $breakpoint-desktop) {
-        width:88%;
-        margin-left:6%;
-        margin-right:6%;
-        margin-top:30px;
-        margin-bottom: $zero-value;
-        height:110px;
-        border-radius:12px;
-    }
-
     &__img {
-        width: auto;
-        margin: $zero-value -15%;
         filter:brightness(0.7);
     }
-
     &__title {
-        position:$second-position;
         font-weight:500;
         font-size: 55px;
-
         @media (max-width: $breakpoint-desktop) {
             font-size: 27px;
-            left: 10%;
-            width:60%;
         }
-
-    }
-
-}
-
-/*************MainCards*************/
-
-.card-container {
-    margin-top: 50px;
-    display:grid;
-    grid-template-rows:repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    margin-left:$main-margin;
-    margin-right:$main-margin;
-    margin-bottom:50px;
-    padding:55px;
-    border-radius:25px;
-    column-gap: 5%;
-    row-gap: 50px;
-    @media (max-width: $breakpoint-desktop) {
-        @include display-flex-and-column;
-        margin-top:$zero-value;
-        padding-top: 30px;
-        padding-left:$zero-value;
-        padding-bottom:$zero-value;
-        padding-right:$zero-value;
-        row-gap: 20px;
-        margin-bottom:30px;
-    }
-}
-
-.card-container a {
-    height:340px;
-    border-radius:10px;
-    z-index:3;
-    @media (max-width: $breakpoint-desktop) {
-        height:260px;
     }
 }
 
 .card {
-    position:$main-position;
-    width: $second-width;
-    height: 340px;
-    border-radius:10px;
-    display:flex;
-    align-items:flex-end;
-    background-size: cover;
-    background-position:$center-value;
-    z-index:2;
     &::before {
-        content: "";
-        position: $second-position;
-        top: $zero-value;
-        right: $zero-value;
-        bottom: $zero-value;
-        left: $zero-value;
-        border-radius:10px;
-        z-index: 1;
         background: linear-gradient(to bottom, transparent 60%, rgb(77, 76, 76, 0.8));
-      }
-    @media (max-width: $breakpoint-desktop) {
-        height:260px;
     }
     &__h2 {
         font-weight:400;
         font-size:22px;
-        width:50%;
-        padding-left:20px;
-        z-index:2;
+    }
+}
+
+.slideshow-arrow {
+    background-color:transparent;
+    border:none;
+    font-size:90px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 23px;
+    }
+}
+
+.arrow-left,
+.arrow-right {
+    cursor: pointer;
+}
+
+.title-and-location {
+    &__h1 {
+        font-weight:400;
+        font-size:3em;
+        @media (max-width: $breakpoint-desktop) {
+            font-size:1.5em;
+        }
     }
 }
 
 .footer {
     background-color: black;
-    @include display-flex-and-column;
-    align-items:$center-value;
-    justify-content: $center-value;
-    text-align: $center-value;
-    padding-top:65px;
-    padding-bottom:$minimal-px;
-    @media (max-width: $breakpoint-desktop) {
-        padding-bottom: 30px;
-    }
     &__copyright {
         font-weight:400;
         font-size:27px;
         @media (max-width: $breakpoint-desktop) {
             font-size:14px;
-            width:35%;
-            padding-bottom:20px;
         }
     }
 }

@@ -1,0 +1,167 @@
+/***BREAKPOINT RESPONSIVE***/
+/**MERGING VALUES**/
+/***POSITIONS***/
+.collapse,
+#slideshow,
+.collapse-container__description,
+.collapse-container__equipment,
+.navigation__nav a,
+.card {
+  position: relative;
+}
+
+.collapse__chevron,
+.slideshow-arrow,
+.img-numbers,
+.header-banner__title,
+.card::before {
+  position: absolute;
+}
+
+/***DIVERSES MERGING***/
+.banner__all-img,
+.banner-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.collapse-container__presentation,
+.collapse-container__presentation-logement,
+.collapse-container__description,
+.collapse-container__equipment {
+  overflow: hidden;
+}
+
+/***ALIGN-ITEMS***/
+.collapse-container,
+.collapse,
+#slideshow,
+.profile,
+.body-error,
+.header-banner,
+.footer {
+  align-items: center;
+}
+
+/***JUSTIFY-CONTENT***/
+#slideshow,
+.footer,
+.header-banner {
+  justify-content: center;
+}
+
+/***TEXT-ALIGN***/
+@media (max-width: 1024px) {
+  .body-error {
+    text-align: center;
+  }
+}
+
+.footer {
+  text-align: center;
+}
+
+/***MIXINS***/
+.logement-page-presentation,
+.collapse-logement,
+.navigation__logo-and-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#slideshow,
+.profile,
+.logement-tags-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .rating {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.collapse-container,
+.title-and-location,
+.profile-and-stars-container,
+.body-error,
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .logement-page-presentation,
+  .collapse-logement,
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/********************************/
+.header-banner {
+  overflow: hidden;
+  display: flex;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-container a {
+  z-index: 3;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+.card::before {
+  z-index: 1;
+}
+.card__h2 {
+  z-index: 2;
+}
+
+.banner-img {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.body-error__404 {
+  font-size: 350px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .body-error__404 {
+    font-size: 8em;
+  }
+}
+.body-error__text {
+  font-size: 40px;
+}
+@media (max-width: 1024px) {
+  .body-error__text {
+    font-size: 20px;
+    width: 58%;
+  }
+}
+.body-error__link {
+  font-size: 20px;
+  margin-top: 100px;
+  margin-bottom: 140px;
+}
+@media (max-width: 1024px) {
+  .body-error__link {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=merging.css.map */
