@@ -75,7 +75,6 @@ a,
 /***FONT-SIZES & WEIGHT***/
 @media (max-width: 1024px) {
   .title-and-location__location,
-  .profile,
   .collapse-size-logement {
     font-size: 1em;
   }
@@ -161,6 +160,12 @@ a,
 @media (max-width: 1024px) {
   .title-and-location__h1 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile {
+    font-size: 1em;
   }
 }
 

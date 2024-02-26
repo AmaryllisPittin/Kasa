@@ -94,7 +94,6 @@ a,
 /***FONT-SIZES & WEIGHT***/
 
 .title-and-location__location,
-.profile,
 .collapse-size-logement {
     @media (max-width: $breakpoint-desktop) {
         font-size: $standard-font-size;
@@ -184,6 +183,12 @@ a,
         @media (max-width: $breakpoint-desktop) {
             font-size:1.5em;
         }
+    }
+}
+
+.profile {
+    @media (max-width: $breakpoint-desktop) {
+        font-size: $standard-font-size;
     }
 }
 

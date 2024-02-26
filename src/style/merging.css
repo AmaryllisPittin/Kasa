@@ -107,8 +107,7 @@
 
 @media (max-width: 1024px) {
   .logement-page-presentation,
-  .collapse-logement,
-  .card-container {
+  .collapse-logement {
     display: flex;
     flex-direction: column;
   }
@@ -123,6 +122,12 @@
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1024px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .card-container a {

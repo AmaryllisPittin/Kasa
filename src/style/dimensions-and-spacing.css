@@ -220,6 +220,7 @@ body {
 
 @media (max-width: 1024px) {
   .profile {
+    width: 130px;
     margin-top: 10px;
   }
 }
@@ -281,17 +282,16 @@ body {
   border-radius: 5px;
   height: 0;
 }
-.collapse-container__text {
-  padding-left: 20px;
+@media (max-width: 1024px) {
+  .collapse-container__presentation {
+    width: 81%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .collapse-logement {
   margin-bottom: 20px;
-}
-@media (max-width: 1024px) {
-  .collapse-logement {
-    margin-top: 15px;
-  }
 }
 
 .collapse-container__presentation-logement {
@@ -354,7 +354,7 @@ body {
 }
 @media (max-width: 1024px) {
   .collapse {
-    width: 84%;
+    width: 95%;
     height: 30px;
   }
 }
@@ -372,6 +372,15 @@ body {
 .collapse-about {
   width: 70%;
 }
+@media (max-width: 1024px) {
+  .collapse-about {
+    width: 85%;
+  }
+}
+
+.collapse-container-security {
+  margin-bottom: 20px;
+}
 
 .collapse-container__description {
   right: 20px;
@@ -379,11 +388,25 @@ body {
   border-radius: 5px;
   height: 0;
 }
+@media (max-width: 1024px) {
+  .collapse-container__description {
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 .collapse-container__equipment {
   left: 20px;
   border-radius: 5px;
   height: 0;
+}
+@media (max-width: 1024px) {
+  .collapse-container__equipment {
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .body-error__404 {

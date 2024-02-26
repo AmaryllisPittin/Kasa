@@ -226,6 +226,7 @@ body {
 
 .profile {
     @media (max-width: $breakpoint-desktop) {
+        width:130px;
         margin-top:10px;
     }
     &__img {
@@ -277,17 +278,17 @@ body {
         width:70%;
         border-radius: $minimal-px;
         height:$zero-value;
-    }
-    &__text {
-        padding-left:20px;
+        @media (max-width: $breakpoint-desktop) {
+            width:81%;
+            padding-left:15px;
+            padding-right:15px;
+        }
     }
 }
 
+
 .collapse-logement {
     margin-bottom:20px;
-    @media (max-width: $breakpoint-desktop) {
-        margin-top:15px;
-    }
 }
 
 .collapse-container__presentation-logement {
@@ -340,7 +341,7 @@ body {
     padding-left:15px;
     border-radius:$minimal-px;
     @media (max-width: $breakpoint-desktop) {
-        width:84%;
+        width:95%;
         height:30px;
     }
 
@@ -357,6 +358,13 @@ body {
 
 .collapse-about {
     width:70%;
+    @media (max-width: $breakpoint-desktop) {
+        width:85%;
+    }
+}
+
+.collapse-container-security {
+    margin-bottom:20px;
 }
 
 .collapse-container__description {
@@ -364,12 +372,23 @@ body {
     top:-5px;
     border-radius:$minimal-px;
     height:$zero-value;
+    @media (max-width: $breakpoint-desktop) {
+        right:0;
+        padding-left:10px;
+        padding-right:10px;
+    }
 }
+
 
 .collapse-container__equipment {
     left:20px;
     border-radius: $minimal-px;
     height:$zero-value;
+    @media (max-width: $breakpoint-desktop) {
+        left:0;
+        padding-left:10px;
+        padding-right:10px;
+    }
 }
 
 .body-error {
