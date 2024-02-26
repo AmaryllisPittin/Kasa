@@ -17,7 +17,7 @@ const CollapseRespect = () => {
   return (
     <div className="collapse-container">
       <input type="checkbox" id="collapseCheckboxRespect" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
-      <label htmlFor="collapseCheckboxRespect" className="collapse">
+      <label htmlFor="collapseCheckboxRespect" className="collapse collapse-about">
         Respect
         <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
       </label>

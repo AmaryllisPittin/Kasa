@@ -9,6 +9,9 @@ $main-object-fit: cover;
 $main-modified-overflow: hidden;
 $center-value:center;
 
+$main-z-index:1;
+$second-z-index:2;
+
 @mixin display-row-configuration {
     display:flex;
     flex-direction:row;
@@ -54,8 +57,20 @@ $center-value:center;
 .collapse-container__presentation,
 .collapse-container__presentation-logement,
 .collapse-container__description,
-.collapse-container__equipment {
+.collapse-container__equipment,
+.header-banner {
     overflow:$main-modified-overflow;
+}
+
+.card,
+.card__h2,
+.collapse-description {
+    z-index: $second-z-index;
+}
+
+.card::before,
+.collapse-container__description {
+    z-index: $main-z-index;
 }
 
 /***ALIGN-ITEMS***/
@@ -131,7 +146,6 @@ $center-value:center;
 /********************************/
 
 .header-banner {
-    overflow: $main-modified-overflow;
     display: flex;
 }
 
@@ -150,40 +164,25 @@ $center-value:center;
     align-items:flex-end;
     background-size: cover;
     background-position:$center-value;
-    z-index:2;
-    &::before {
-        z-index: 1;
-    }
-    &__h2 {
-        z-index:2;
-    }
 }
 
 .banner-img {
     object-position: $center-value;
 }
 
-.body-error {
-    &__404 {
-    font-size:350px;
-    margin-bottom:50px;
+.profile-and-stars-container {
     @media (max-width: $breakpoint-desktop) {
-        font-size:8em;
-    }
-    }
-    &__text {
-    font-size:40px;
-    @media (max-width: $breakpoint-desktop) {
-        font-size:20px;
-        width:58%;
-    }
-    }
-    &__link {
-        font-size:20px;
-        margin-top:100px;
-        margin-bottom: 140px;
-        @media (max-width: $breakpoint-desktop) {
-            font-size:17px;
-        }
+        display:flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
     }
 }
+
+.collapse {
+    text-align:left;
+    display:flex;
+}
+
+.visually-hidden {
+    display:none;
+  }

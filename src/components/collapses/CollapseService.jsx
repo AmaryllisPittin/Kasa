@@ -17,7 +17,7 @@ const CollapseService = () => {
   return (
     <div className="collapse-container">
       <input type="checkbox" id="collapseCheckboxService" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
-      <label htmlFor="collapseCheckboxService" className="collapse">
+      <label htmlFor="collapseCheckboxService" className="collapse collapse-about">
         Service
         <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
       </label>

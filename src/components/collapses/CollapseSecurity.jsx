@@ -17,7 +17,7 @@ const CollapseSecurity = () => {
   return (
     <div className="collapse-container">
       <input type="checkbox" id="collapseCheckboxSecurity" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
-      <label htmlFor="collapseCheckboxSecurity" className="collapse">
+      <label htmlFor="collapseCheckboxSecurity" className="collapse collapse-about">
         Sécurité
         <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
       </label>

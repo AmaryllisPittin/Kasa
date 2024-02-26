@@ -63,7 +63,8 @@ code {
 }
 
 a,
-.navigation__nav a {
+.navigation__nav a,
+.rating {
   text-decoration: none;
 }
 
@@ -71,7 +72,7 @@ a,
   text-decoration: underline;
 }
 
-/***FONT-SIZES***/
+/***FONT-SIZES & WEIGHT***/
 @media (max-width: 1024px) {
   .title-and-location__location,
   .profile,
@@ -86,10 +87,32 @@ a,
   font-size: 1.2em;
 }
 
-/***GENERAL***/
-.navigation__nav a {
+.collapse-container__description,
+.collapse-container__equipment,
+.collapse-container__presentation,
+.collapse-container__presentation-logement,
+.body-error__link {
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .body-error__text {
+    font-size: 20px;
+  }
+}
+
+.navigation__nav a,
+.fa-chevron-up {
   font-size: 25px;
 }
+
+.card__h2,
+.title-and-location__h1,
+.footer__copyright {
+  font-weight: 400;
+}
+
+/***GENERAL***/
 @media (max-width: 1024px) {
   .navigation__nav a {
     font-size: 90%;
@@ -113,7 +136,6 @@ a,
   background: linear-gradient(to bottom, transparent 60%, rgba(77, 76, 76, 0.8));
 }
 .card__h2 {
-  font-weight: 400;
   font-size: 22px;
 }
 
@@ -134,7 +156,6 @@ a,
 }
 
 .title-and-location__h1 {
-  font-weight: 400;
   font-size: 3em;
 }
 @media (max-width: 1024px) {
@@ -143,11 +164,72 @@ a,
   }
 }
 
+.rating {
+  color: #E3E3E3;
+}
+@media (max-width: 1024px) {
+  .rating {
+    font-size: 13px;
+  }
+}
+
+.logement-tag {
+  background-color: #FF6060;
+}
+@media (max-width: 1024px) {
+  .logement-tag {
+    font-size: 0.7em;
+  }
+}
+
+.body-error__404 {
+  font-size: 350px;
+}
+@media (max-width: 1024px) {
+  .body-error__404 {
+    font-size: 8em;
+  }
+}
+.body-error__text {
+  font-size: 40px;
+}
+@media (max-width: 1024px) {
+  .body-error__link {
+    font-size: 17px;
+  }
+}
+
+.collapse {
+  font-size: 27px;
+  border: none;
+}
+@media (max-width: 1024px) {
+  .collapse {
+    font-size: 100%;
+  }
+}
+.collapse__chevron {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .collapse-container__text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fa-chevron-up {
+    font-size: 140%;
+  }
+}
+
 .footer {
   background-color: black;
 }
 .footer__copyright {
-  font-weight: 400;
   font-size: 27px;
 }
 @media (max-width: 1024px) {

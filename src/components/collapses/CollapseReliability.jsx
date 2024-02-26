@@ -17,7 +17,7 @@ const CollapseReliability = () => {
   return (
     <div className="collapse-container">
       <input type="checkbox" id="collapseCheckboxReliability" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
-      <label htmlFor="collapseCheckboxReliability" className="collapse">
+      <label htmlFor="collapseCheckboxReliability" className="collapse collapse-about">
         Fiabilité
         <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
       </label>

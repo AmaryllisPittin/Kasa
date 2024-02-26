@@ -19,7 +19,6 @@ $minimal-px: 5px;
 $main-position: relative;
 $second-position: absolute;
 
-$main-modified-overflow: hidden;
 $center-value: center;
 
 @mixin display-flex-and-column {
@@ -62,12 +61,6 @@ $center-value: center;
 .collapse-container__equipment {
     width:$fourth-width;
 }
-
-
-
-
-
-
 
 /****************************/
 
@@ -224,6 +217,56 @@ body {
     }
 }
 
+.profile-and-stars-container {
+    margin-top:40px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-top:$zero-value;
+    }
+}
+
+.profile {
+    @media (max-width: $breakpoint-desktop) {
+        margin-top:10px;
+    }
+    &__img {
+        border-radius:50px;
+        margin-left:10px;
+        width:65px;
+        @media (max-width: $breakpoint-desktop) {
+            width:40px;
+        }
+    }
+}
+
+.rating {
+    margin-top:20px;
+    width:200px;
+}
+
+.fa-star {
+    padding-left:10px;
+    @media (max-width: $breakpoint-desktop) {
+        padding-right: 6px;
+        padding-left:$zero-value;
+    }
+}
+
+.logement-tag {
+    margin-right:10px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:3px;
+    height:24px;
+    border-radius:10px;
+    margin-bottom:24px;
+    @media (max-width: $breakpoint-desktop) {
+        height:15px;
+        padding-bottom:3px;
+        margin-bottom: $zero-value;
+        border-radius:$minimal-px;
+    }
+}
+
 .collapse-container {
     margin-bottom:30px;
     @media (max-width: $breakpoint-desktop) {
@@ -233,15 +276,56 @@ body {
     &__presentation {
         width:70%;
         border-radius: $minimal-px;
-        font-size:20px;
         height:$zero-value;
-        transition: height 0.3s ease-out;
     }
     &__text {
         padding-left:20px;
-        @media (max-width: $breakpoint-desktop) {
-            font-size: 0.8em;
-        }
+    }
+}
+
+.collapse-logement {
+    margin-bottom:20px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-top:15px;
+    }
+}
+
+.collapse-container__presentation-logement {
+    width:$fourth-width;
+    border-radius: $minimal-px;
+    height:80px;
+    margin-right:6%;
+    @media (max-width: $breakpoint-desktop) {
+        margin-right: $zero-value;
+    }
+}
+
+.special-collapse-logement {
+    @media (max-width: $breakpoint-desktop) {
+        margin-bottom:20px;
+    }
+}
+
+.collapse-size-logement {
+    width:91%;
+    border-radius:10px;
+    @media (max-width: $breakpoint-desktop) {
+        border-radius:$minimal-px;
+    }
+}
+
+.collapse-equipment {
+    margin-left:40px;
+    margin-right:$zero-value;
+    @media (max-width: $breakpoint-desktop) {
+        margin-left:$zero-value;
+    }
+}
+
+.collapse-description {
+    margin-right:40px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-right:$zero-value;
     }
 }
 
@@ -252,27 +336,17 @@ body {
 }
 
 .collapse {
-    border: none;
-    text-align:left;
-    width:70%;
     height:50px;
     padding-left:15px;
     border-radius:$minimal-px;
-    font-size:27px;
-    display:flex;
     @media (max-width: $breakpoint-desktop) {
         width:84%;
         height:30px;
-        font-size:100%;
     }
 
     &__chevron {
         right:20px;
         top:12px;
-        border:none;
-        background-color: transparent;
-        cursor:pointer;
-        transition: transform 0.5s ;
         @media (max-width: $breakpoint-desktop) {
             top:4px;
             right:8px;
@@ -281,33 +355,39 @@ body {
     }
 }
 
-.fa-chevron-up {
-    font-size: 25px;
+.collapse-about {
+    width:70%;
+}
+
+.collapse-container__description {
+    right:20px;
+    top:-5px;
+    border-radius:$minimal-px;
+    height:$zero-value;
+}
+
+.collapse-container__equipment {
+    left:20px;
+    border-radius: $minimal-px;
+    height:$zero-value;
+}
+
+.body-error {
+    &__404 {
+    margin-bottom:50px;
+    }
+    &__text {
     @media (max-width: $breakpoint-desktop) {
-        font-size: 140%;
+        width:58%;
+        }
+    }
+    &__link {
+        margin-top:100px;
+        margin-bottom: 140px;
     }
 }
 
-.rotated {
-    transform: rotate(-180deg);
-}
-
-  .visually-hidden {
-    display:none;
-  }
-
-  /*ANIMATIONS*/
-
-  .collapse-checkbox:checked ~ .collapse-container__presentation {
-    animation: height drawerOpen 0.3s forwards;
-  }
-
-  .collapse-checkbox:not(:checked) ~ .collapse-container__presentation {
-    animation: drawerClose 0.3s forwards;
-  }
-
-
-  .footer {
+.footer {
     padding-top:65px;
     padding-bottom:$minimal-px;
     @media (max-width: $breakpoint-desktop) {

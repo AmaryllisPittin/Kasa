@@ -63,6 +63,11 @@ $second-text-decoration: underline;
 
 $standard-font-size:1em;
 $main-font-size: 1.2em;
+$second-font-size:20px;
+$third-font-size: 27px;
+$fourth-font-size: 25px;
+
+$main-font-weight: 400;
 
 /***FONT-STYLES***/
 
@@ -77,7 +82,8 @@ code {
     }
 
 a,
-.navigation__nav a {
+.navigation__nav a,
+.rating {
     text-decoration:$main-text-decoration;
 }
 
@@ -85,7 +91,7 @@ a,
     text-decoration: $second-text-decoration;
 }
 
-/***FONT-SIZES***/
+/***FONT-SIZES & WEIGHT***/
 
 .title-and-location__location,
 .profile,
@@ -101,13 +107,35 @@ a,
     font-size:$main-font-size;
 }
 
+.collapse-container__description,
+.collapse-container__equipment,
+.collapse-container__presentation,
+.collapse-container__presentation-logement,
+.body-error__link {
+    font-size:$second-font-size;
+}
 
+.body-error__text {
+    @media (max-width: $breakpoint-desktop) {
+        font-size:$second-font-size;
+    }
+}
+
+.navigation__nav a,
+.fa-chevron-up {
+    font-size:$fourth-font-size;
+}
+
+.card__h2,
+.title-and-location__h1,
+.footer__copyright {
+    font-weight: $main-font-weight;
+}
 
 /***GENERAL***/
 
 .navigation {  
     &__nav a {
-        font-size:25px;
         @media (max-width: $breakpoint-desktop) {
             font-size:90%;
         }
@@ -122,7 +150,7 @@ a,
         font-weight:500;
         font-size: 55px;
         @media (max-width: $breakpoint-desktop) {
-            font-size: 27px;
+            font-size: $third-font-size;
         }
     }
 }
@@ -132,7 +160,6 @@ a,
         background: linear-gradient(to bottom, transparent 60%, rgb(77, 76, 76, 0.8));
     }
     &__h2 {
-        font-weight:400;
         font-size:22px;
     }
 }
@@ -153,7 +180,6 @@ a,
 
 .title-and-location {
     &__h1 {
-        font-weight:400;
         font-size:3em;
         @media (max-width: $breakpoint-desktop) {
             font-size:1.5em;
@@ -161,11 +187,66 @@ a,
     }
 }
 
+.rating {
+    color: #E3E3E3;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 13px;
+    }
+}
+
+.logement-tag {
+    background-color: #FF6060;
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 0.7em;
+    }
+}
+
+.body-error {
+    &__404 {
+    font-size:350px;
+    @media (max-width: $breakpoint-desktop) {
+        font-size:8em;
+        }
+    }
+    &__text {
+    font-size:40px;
+    }
+    &__link {
+        @media (max-width: $breakpoint-desktop) {
+            font-size:17px;
+        }
+    }
+}
+
+.collapse {
+    font-size: $third-font-size;
+    border: none;
+    @media (max-width: $breakpoint-desktop) {
+        font-size:100%;
+    }
+    &__chevron {
+        border:none;
+        background-color: transparent;
+        cursor:pointer;
+    }
+}
+
+.collapse-container__text {
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 0.8em;
+    }
+}
+
+.fa-chevron-up {
+    @media (max-width: $breakpoint-desktop) {
+        font-size: 140%;
+    }
+}
+
 .footer {
     background-color: black;
     &__copyright {
-        font-weight:400;
-        font-size:27px;
+        font-size: $third-font-size;
         @media (max-width: $breakpoint-desktop) {
             font-size:14px;
         }
