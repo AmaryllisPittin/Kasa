@@ -78,10 +78,10 @@ const Slideshow = () => {
 
     return (
         <div id="slideshow">
-            <button className={`slideshow-arrow arrow-left`} onClick={() => setCurrentIndex((currentIndex - 1 + picturesData.length) % picturesData.length)}>
+            <button className={`slideshow-arrow arrow-left`}>
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <button className={`slideshow-arrow arrow-right`} onClick={() => setCurrentIndex((currentIndex + 1) % picturesData.length)}>
+            <button className={`slideshow-arrow arrow-right`} >
                 <FontAwesomeIcon icon={faChevronRight} />
             </button>
 
