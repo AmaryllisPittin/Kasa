@@ -37,9 +37,3 @@ const CollapseEquipment = ({ equipments }) => {
 };
 
 export default CollapseEquipment;
-
-/*<p className="collapse-container__text">
-{equipments && equipments.map((equipment, index) => (
-    <div key={index} className="equipment">{equipment}</div>
-  ))}
-</p>*/

@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Body404 from "./Body404";
 

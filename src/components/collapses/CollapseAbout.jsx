@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-const CollapseRespect = () => {
+const CollapseAbout = ({ title, text, id }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const chevronClass = isCollapsed ? '' : 'rotated';
   const contentRef = useRef(null);
@@ -16,9 +16,9 @@ const CollapseRespect = () => {
 
   return (
     <div className="collapse-container">
-      <input type="checkbox" id="collapseCheckboxRespect" className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
-      <label htmlFor="collapseCheckboxRespect" className="collapse collapse-about">
-        Respect
+      <input type="checkbox" id={id} className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
+      <label htmlFor={id} className="collapse collapse-about">
+        {title}
         <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
       </label>
       <div
@@ -26,10 +26,10 @@ const CollapseRespect = () => {
         className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`}
         style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }}
       >
-        <p className="collapse-container__text">La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
+        <p className="collapse-container__text">{text}</p>
       </div>
     </div>
   );
 };
 
-export default CollapseRespect;
+export default CollapseAbout;

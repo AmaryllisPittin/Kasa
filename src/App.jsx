@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import dataTab from "../src/data.json";
-import PageComponent from "../src/components/PageComponent";
-import Index from "../src/pages/Index";
-import About from "../src/pages/About";
-import NotFound from "../src/components/NotFound";
+import dataTab from "./data.json";
+import PageComponent from "./components/PageComponent";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
