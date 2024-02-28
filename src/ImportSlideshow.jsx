@@ -42,7 +42,6 @@ const ImportSlideShow = () => {
                 number.classList.toggle('number_selected', index === currentIndex);
             });
         
-            // Mise à jour de l'affichage du numéro de l'image actuelle
             const currentImageNumber = currentIndex + 1;
             const totalImages = picturesData.length;
             NumberImgContainer.textContent = `${currentImageNumber}/${totalImages}`;
