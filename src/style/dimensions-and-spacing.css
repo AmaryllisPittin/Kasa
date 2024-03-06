@@ -279,6 +279,7 @@ body {
 }
 .collapse-container__presentation {
   width: 70.5%;
+  max-width: 1230px;
   border-radius: 5px;
   height: 0;
 }
@@ -352,6 +353,7 @@ body {
 }
 
 .collapse {
+  max-width: 1230px;
   height: 50px;
   padding-left: 15px;
   border-radius: 5px;

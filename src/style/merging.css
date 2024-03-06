@@ -97,6 +97,7 @@
 }
 
 .collapse-container,
+.all-collapse-container,
 .title-and-location,
 .profile-and-stars-container,
 .body-error,
@@ -161,4 +162,8 @@
 
 .visually-hidden {
   display: none;
+}
+
+.all-collapse-container {
+  flex-grow: 1;
 }/*# sourceMappingURL=merging.css.map */

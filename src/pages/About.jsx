@@ -11,13 +11,15 @@ const ServiceText = "La bienveillance fait partie des valeurs fondatrices de Kas
 
 const About = () => {
   return (
-    <div>
+    <div className="about-page">
         <Navigation />
         <BannerAbout />
-        <CollapseAbout title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
-        <CollapseAbout title="Respect" text={RespectText} id="collapseCheckboxRespect" />
-        <CollapseAbout title="Service" text={ServiceText} id="collapseCheckboxService" />
-        <CollapseAbout title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
+        <div className="all-collapse-container">
+          <CollapseAbout title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
+          <CollapseAbout title="Respect" text={RespectText} id="collapseCheckboxRespect" />
+          <CollapseAbout title="Service" text={ServiceText} id="collapseCheckboxService" />
+          <CollapseAbout title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
+        </div>
         <Footer />
     </div>
   );

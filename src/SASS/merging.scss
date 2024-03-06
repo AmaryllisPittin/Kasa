@@ -126,6 +126,7 @@ $second-z-index:2;
 }
 
 .collapse-container,
+.all-collapse-container,
 .title-and-location,
 .profile-and-stars-container,
 .body-error,
@@ -187,4 +188,8 @@ $second-z-index:2;
 
 .visually-hidden {
     display:none;
+  }
+
+  .all-collapse-container {
+    flex-grow:1;
   }

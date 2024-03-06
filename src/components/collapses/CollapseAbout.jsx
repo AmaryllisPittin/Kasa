@@ -16,16 +16,12 @@ const CollapseAbout = ({ title, text, id }) => {
 
   return (
     <div className="collapse-container">
-      <input type="checkbox" id={id} className={`collapse__checkbox ${chevronClass} visually-hidden`} onClick={toggleCollapse} />
+      <input type="checkbox" id={id} className={`collapse__checkbox ${chevronClass} visually-hidden`} />
       <label htmlFor={id} className="collapse collapse-about">
         {title}
-        <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
+        <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} onClick={toggleCollapse} />
       </label>
-      <div
-        ref={contentRef}
-        className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`}
-        style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }}
-      >
+      <div ref={contentRef} className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`} style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }} >
         <p className="collapse-container__text">{text}</p>
       </div>
     </div>
