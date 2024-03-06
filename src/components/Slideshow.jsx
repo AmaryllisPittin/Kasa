@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import DataTabs from "../data.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +9,7 @@ const Slideshow = () => {
     const picturesData = DataTabs.find((item) => item.id === id)?.pictures;
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const imgBanner = document.querySelector(".banner__all-img");
@@ -74,22 +74,30 @@ const Slideshow = () => {
             arrowRight.removeEventListener('click', changeDataTab);
             arrowLeft.removeEventListener('click', changeDataTab);
         };
-    }, [currentIndex, picturesData]);
+    }, [currentIndex, picturesData]);*/
+
+    function changeDataTab(direction) {
+        if (direction === 'right') {
+            setCurrentIndex((currentIndex + 1) % picturesData.length);
+        } else {
+            setCurrentIndex((currentIndex - 1 + picturesData.length) % picturesData.length);
+        }
+    }
 
     return (
         <div id="slideshow">
             <button className={`slideshow-arrow arrow-left`}>
-                <FontAwesomeIcon icon={faChevronLeft} />
+                <FontAwesomeIcon icon={faChevronLeft} onClick={() => changeDataTab('left')} />
             </button>
             <button className={`slideshow-arrow arrow-right`} >
-                <FontAwesomeIcon icon={faChevronRight} />
+                <FontAwesomeIcon icon={faChevronRight} onClick={() => changeDataTab('right')} />
             </button>
 
             <div className="banner__all-img banner-img">
                 {picturesData.length > 0 && <img src={picturesData[currentIndex % picturesData.length]} alt={`DataTab ${currentIndex + 1}`} className="banner-img" />}
             </div>
             <div className="img-numbers">
-                
+                {currentIndex + 1} / {picturesData.length}
             </div>
         </div>
     );
