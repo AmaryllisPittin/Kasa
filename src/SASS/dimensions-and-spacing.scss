@@ -269,18 +269,20 @@ body {
 }
 
 .collapse-container {
+    width:100%;
     margin-bottom:30px;
     @media (max-width: $breakpoint-desktop) {
         margin-bottom:$zero-value;
+        margin: 0rem;
         margin-top:20px;
     }
     &__presentation {
-        width:70.5%;
+        width:100%;
         max-width: 1230px;
         border-radius: $minimal-px;
         height:$zero-value;
         @media (max-width: $breakpoint-desktop) {
-            width:81%;
+            width:90%;
             padding-left:15px;
             padding-right:15px;
         }
@@ -363,9 +365,9 @@ body {
 }
 
 .collapse-about {
-    width:70%;
+    width:100%;
     @media (max-width: $breakpoint-desktop) {
-        width:85%;
+        width:100%;
     }
 }
 

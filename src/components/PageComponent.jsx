@@ -4,8 +4,7 @@ import dataTab from "../data.json";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Slideshow from "./Slideshow";
-import CollapseEquipment from "./collapses/CollapseEquipment";
-import CollapseDescription from "./collapses/CollapseDescription";
+import Collapse from "./collapses/Collapse";
 import StarRating from "./StarRating";
 import Tags from "./Tags";
 import NotFound from "./NotFound"; // Importez le composant NotFound
@@ -43,8 +42,12 @@ const PageComponent = () => {
           </div>
         </div>
         <div className="collapse-logement">
-          <CollapseDescription description={item.description} />
-          <CollapseEquipment equipments={item.equipments} />
+          <div className="collapse-container">
+            <Collapse title="Description" text={item.description} />
+          </div>
+          <div className="collapse-container">
+            <Collapse title="Equipements" equipments={item.equipments} isEquipement={true}/>
+          </div>
         </div>
       </div>
       <Footer />

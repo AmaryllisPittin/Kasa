@@ -15,12 +15,20 @@ const About = () => {
         <Navigation />
         <BannerAbout />
         <div className="all-collapse-container">
+        <div className="collapse-container">
           <CollapseAbout title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
+        </div>
+        <div className="collapse-container">
           <CollapseAbout title="Respect" text={RespectText} id="collapseCheckboxRespect" />
+        </div>
+        <div className="collapse-container">
           <CollapseAbout title="Service" text={ServiceText} id="collapseCheckboxService" />
+        </div>
+        <div className="collapse-container">
           <CollapseAbout title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
         </div>
-        <Footer />
+      </div>
+      <Footer />
     </div>
   );
 };
