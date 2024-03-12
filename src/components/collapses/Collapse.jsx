@@ -15,15 +15,14 @@ const Collapse = ({ title, text, id, equipments, isEquipement }) => {
   };
 
   return (
-    <div>
+    <div className="collapse-container">
       <input type="checkbox" id={id} className={`collapse__checkbox ${chevronClass} visually-hidden`} />
-      <label htmlFor={id} className="collapse collapse-about">
+      <label htmlFor={id} className="collapse collapse-label">
         {title}
         <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} onClick={toggleCollapse} />
       </label>
       <div ref={contentRef} className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`} style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }} >
-        {isEquipement 
-        ? 
+        {isEquipement ? 
         <p className="collapse-container__text">
           {equipments && equipments.map((equipment, index) => (
               <div key={index} className="equipment">{equipment}</div>

@@ -42,10 +42,10 @@ const PageComponent = () => {
           </div>
         </div>
         <div className="collapse-logement">
-          <div className="collapse-container">
-            <Collapse title="Description" text={item.description} />
+          <div className="collapse-container-logement-description">
+            <Collapse className="collapse-description-padding" title="Description" text={item.description} />
           </div>
-          <div className="collapse-container">
+          <div className="collapse-container-logement-equipment">
             <Collapse title="Equipements" equipments={item.equipments} isEquipement={true}/>
           </div>
         </div>
