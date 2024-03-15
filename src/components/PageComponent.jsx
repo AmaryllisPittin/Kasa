@@ -7,16 +7,14 @@ import Slideshow from "./Slideshow";
 import Collapse from "./collapses/Collapse";
 import StarRating from "./StarRating";
 import Tags from "./Tags";
-import NotFound from "./NotFound"; // Importez le composant NotFound
+import NotFound from "./NotFound";
 
 const PageComponent = () => {
   const { id } = useParams();
   const item = dataTab.find((item) => item.id === id);
   const picturesData = dataTab.find((picturesData) => picturesData.id === id);
 
-  // Vérification si la page existe
   if (!item) {
-    // Afficher le composant NotFound si la page n'existe pas
     return <NotFound />;
   }
 

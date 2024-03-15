@@ -107,7 +107,7 @@ body {
         margin-left:6%;
         margin-right:6%;
         margin-top:30px;
-        margin-bottom: $zero-value;
+        /*margin-bottom: $zero-value;*/
         height:110px;
         border-radius:12px;
     }
@@ -219,6 +219,7 @@ body {
 
 .profile-and-stars-container {
     margin-top:40px;
+    margin-bottom:40px;
     @media (max-width: $breakpoint-desktop) {
         margin-top:$zero-value;
     }
@@ -274,16 +275,16 @@ body {
     margin-right: $main-margin;
     margin-bottom:30px;
     @media (max-width: $breakpoint-desktop) {
-        margin-bottom:$zero-value;
-        margin-top:20px;
+        margin-bottom:20px;
+        margin-top:$zero-value;
     }
     &__presentation {
-        width:86%;
+        width:88%;
         max-width: 1230px;
         border-radius: $minimal-px;
         height:$zero-value;
         @media (max-width: $breakpoint-desktop) {
-            width:90%;
+            width:85%;
             padding-left:15px;
             padding-right:15px;
         }
@@ -299,14 +300,15 @@ body {
     margin-bottom:20px;
 }
 
-.collapse-container__presentation-logement {
-    width:$fourth-width;
+.collapse-label .collapse-container__presentation {
+    width:90%;
+    /*width:$fourth-width;
     border-radius: $minimal-px;
     height:80px;
     margin-right:6%;
     @media (max-width: $breakpoint-desktop) {
         margin-right: $zero-value;
-    }
+    }*/
 }
 
 .special-collapse-logement {
@@ -385,6 +387,11 @@ body {
     @media (max-width: $breakpoint-desktop) {
         margin-right: 0;
     }
+}
+
+.collapse-about {
+    width:88%;
+
 }
 
 .collapse-label {

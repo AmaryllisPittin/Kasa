@@ -87,7 +87,7 @@ body {
     margin-left: 6%;
     margin-right: 6%;
     margin-top: 30px;
-    margin-bottom: 0;
+    /*margin-bottom: $zero-value;*/
     height: 110px;
     border-radius: 12px;
   }
@@ -211,6 +211,7 @@ body {
 
 .profile-and-stars-container {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 @media (max-width: 1024px) {
   .profile-and-stars-container {
@@ -276,19 +277,19 @@ body {
 }
 @media (max-width: 1024px) {
   .collapse-container {
-    margin-bottom: 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
 }
 .collapse-container__presentation {
-  width: 86%;
+  width: 88%;
   max-width: 1230px;
   border-radius: 5px;
   height: 0;
 }
 @media (max-width: 1024px) {
   .collapse-container__presentation {
-    width: 90%;
+    width: 85%;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -302,16 +303,15 @@ body {
   margin-bottom: 20px;
 }
 
-.collapse-container__presentation-logement {
-  width: 92%;
-  border-radius: 5px;
-  height: 80px;
-  margin-right: 6%;
-}
-@media (max-width: 1024px) {
-  .collapse-container__presentation-logement {
-    margin-right: 0;
-  }
+.collapse-label .collapse-container__presentation {
+  width: 90%;
+  /*width:$fourth-width;
+  border-radius: $minimal-px;
+  height:80px;
+  margin-right:6%;
+  @media (max-width: $breakpoint-desktop) {
+      margin-right: $zero-value;
+  }*/
 }
 
 @media (max-width: 1024px) {
@@ -405,6 +405,10 @@ body {
   .collapse-container-logement-equipment {
     margin-right: 0;
   }
+}
+
+.collapse-about {
+  width: 88%;
 }
 
 .collapse-label {
