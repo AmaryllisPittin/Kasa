@@ -68,6 +68,10 @@ body {
     margin: $zero-value;
     }
 
+.about-page {
+    height:100%;
+}
+
 .navigation {  
     &__logo-and-nav {
         padding-top:42px;
@@ -270,8 +274,8 @@ body {
 }
 
 .collapse-container {
-    width:$main-width;
-    margin-left:$main-margin;
+    width:500px;
+    margin-left:1%;
     margin-right: $main-margin;
     margin-bottom:30px;
     @media (max-width: $breakpoint-desktop) {
@@ -279,7 +283,7 @@ body {
         margin-top:$zero-value;
     }
     &__presentation {
-        width:88%;
+        width:100%;
         max-width: 1230px;
         border-radius: $minimal-px;
         height:$zero-value;
@@ -367,23 +371,23 @@ body {
     }
 }
 
-.collapse-container-logement-description,
+/*.collapse-container-logement-description,
 .collapse-container-logement-equipment {
     width:36%;
     @media (max-width: $breakpoint-desktop) {
         width:100%;
     }
-}
+}*/
 
 .collapse-container-logement-description {
-    margin-left:3.5%;
+    /*margin-right:32%;*/
     @media (max-width: $breakpoint-desktop) {
         margin-left: 0;
     }
 }
 
 .collapse-container-logement-equipment {
-    margin-right:5.5%;
+    /*margin-right:2.5%;*/
     @media (max-width: $breakpoint-desktop) {
         margin-right: 0;
     }
@@ -395,7 +399,7 @@ body {
 }
 
 .collapse-label {
-    width:136%;
+    width:100%;
     @media (max-width: $breakpoint-desktop) {
         width:100%;
     }

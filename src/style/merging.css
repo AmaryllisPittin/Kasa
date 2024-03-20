@@ -75,8 +75,13 @@
 
 /***MIXINS***/
 .logement-page-presentation,
-.collapse-logement,
 .navigation__logo-and-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.collapse-logement {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -96,6 +101,7 @@
   }
 }
 
+.about-page,
 .collapse-container,
 .all-collapse-container,
 .title-and-location,

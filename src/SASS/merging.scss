@@ -108,9 +108,15 @@ $second-z-index:2;
 /***MIXINS***/
 
 .logement-page-presentation,
-.collapse-logement,
+/*.collapse-logement,*/
 .navigation__logo-and-nav {
     @include display-row-configuration;
+}
+
+.collapse-logement {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
 }
 
 #slideshow,
@@ -125,6 +131,7 @@ $second-z-index:2;
     }
 }
 
+.about-page,
 .collapse-container,
 .all-collapse-container,
 .title-and-location,
