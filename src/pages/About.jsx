@@ -15,10 +15,10 @@ const About = () => {
         <Navigation />
         <BannerAbout />
         <div className="all-collapse-container">
-          <CollapseAbout title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
-          <CollapseAbout title="Respect" text={RespectText} id="collapseCheckboxRespect" />
-          <CollapseAbout title="Service" text={ServiceText} id="collapseCheckboxService" />
-          <CollapseAbout title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
+          <CollapseAbout title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" equipments={[]} isEquipement={false} isAbout={true} />
+          <CollapseAbout title="Respect" text={RespectText} id="collapseCheckboxRespect" equipments={[]} isEquipement={false} isAbout={true} />
+          <CollapseAbout title="Service" text={ServiceText} id="collapseCheckboxService" equipments={[]} isEquipement={false} isAbout={true} />
+          <CollapseAbout title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" equipments={[]} isEquipement={false} isAbout={true} />
       </div>
       <Footer />
     </div>

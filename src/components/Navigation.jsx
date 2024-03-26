@@ -3,7 +3,6 @@ import logo from "../img/LOGO(1).png";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
-  console.log('Index est bien appelé');
   return (
     <div className="navigation">
       <div className="navigation__logo-and-nav">

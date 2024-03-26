@@ -315,6 +315,15 @@ body {
     }*/
 }
 
+.collapse-container__dimensions {
+    width:100%;
+}
+
+.equipment {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
 .special-collapse-logement {
     @media (max-width: $breakpoint-desktop) {
         margin-bottom:20px;
@@ -371,13 +380,9 @@ body {
     }
 }
 
-/*.collapse-container-logement-description,
-.collapse-container-logement-equipment {
-    width:36%;
-    @media (max-width: $breakpoint-desktop) {
-        width:100%;
-    }
-}*/
+.collapse-container-about {
+    width:800px;
+}
 
 .collapse-container-logement-description {
     /*margin-right:32%;*/
