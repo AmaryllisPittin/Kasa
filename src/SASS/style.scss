@@ -16,7 +16,7 @@ $third-color: #F6F6F6;
 .title-and-location__h1,
 .title-and-location__location,
 .profile,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .collapse-container__description,
 .collapse-container__equipment {
     color: $main-color;
@@ -32,13 +32,15 @@ $third-color: #F6F6F6;
     color: $second-color;
 }
 
-.collapse {
+.collapse,
+.collapse-title-container {
     color: $third-color;
 }
 
 /***BACKGROUND-COLORS***/
 
-.collapse {
+.collapse,
+.collapse-title-container {
     background-color: $main-color;
 }
 
@@ -50,7 +52,7 @@ $third-color: #F6F6F6;
 }
 
 .collapse-container__presentation,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .collapse-container__description,
 .collapse-container__equipment {
     background-color: $third-color;
@@ -109,7 +111,7 @@ a,
 .collapse-container__description,
 .collapse-container__equipment,
 .collapse-container__presentation,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .body-error__link {
     font-size:$second-font-size;
 }
@@ -223,7 +225,8 @@ a,
     }
 }
 
-.collapse {
+.collapse,
+.collapse-title-container {
     font-size: $third-font-size;
     border: none;
     @media (max-width: $breakpoint-desktop) {
@@ -236,7 +239,8 @@ a,
     }
 }
 
-.collapse-container__text {
+.collapse-container__text,
+.collapse-container-logement__text {
     @media (max-width: $breakpoint-desktop) {
         font-size: 0.8em;
     }

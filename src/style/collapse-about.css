@@ -1,0 +1,83 @@
+/***BREAKPOINT RESPONSIVE***/
+.collapse-container {
+  margin-bottom: 30px;
+}
+@media (max-width: 1024px) {
+  .collapse-container {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+}
+.collapse-container__presentation {
+  width: 88%;
+  max-width: 1230px;
+  border-radius: 5px;
+  height: 0;
+}
+@media (max-width: 1024px) {
+  .collapse-container__presentation {
+    width: 82%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.collapse-container__text {
+  padding-left: 18px;
+  padding-right: 10px;
+}
+
+.collapse-label .collapse-container__presentation {
+  width: 90%;
+}
+
+.collapse-container__dimensions {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .collapse-security-margin-bottom {
+    margin-bottom: 20px;
+  }
+}
+
+.collapse {
+  max-width: 1230px;
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .collapse {
+    width: 95%;
+    height: 30px;
+  }
+}
+.collapse__chevron {
+  right: 20px;
+  top: 12px;
+}
+@media (max-width: 1024px) {
+  .collapse__chevron {
+    top: 4px;
+    right: 8px;
+  }
+}
+
+.collapse-container-about {
+  width: 800px;
+}
+
+.collapse-about {
+  width: 88%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.collapse-label {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .collapse-label {
+    width: 100%;
+  }
+}/*# sourceMappingURL=collapse-about.css.map */

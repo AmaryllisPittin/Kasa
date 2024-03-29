@@ -9,7 +9,7 @@
 .title-and-location__h1,
 .title-and-location__location,
 .profile,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .collapse-container__description,
 .collapse-container__equipment {
   color: #FF6060;
@@ -25,12 +25,14 @@
   color: white;
 }
 
-.collapse {
+.collapse,
+.collapse-title-container {
   color: #F6F6F6;
 }
 
 /***BACKGROUND-COLORS***/
-.collapse {
+.collapse,
+.collapse-title-container {
   background-color: #FF6060;
 }
 
@@ -44,7 +46,7 @@
 }
 
 .collapse-container__presentation,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .collapse-container__description,
 .collapse-container__equipment {
   background-color: #F6F6F6;
@@ -89,7 +91,7 @@ a,
 .collapse-container__description,
 .collapse-container__equipment,
 .collapse-container__presentation,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .body-error__link {
   font-size: 20px;
 }
@@ -204,23 +206,27 @@ a,
   }
 }
 
-.collapse {
+.collapse,
+.collapse-title-container {
   font-size: 27px;
   border: none;
 }
 @media (max-width: 1024px) {
-  .collapse {
+  .collapse,
+  .collapse-title-container {
     font-size: 100%;
   }
 }
-.collapse__chevron {
+.collapse__chevron,
+.collapse-title-container__chevron {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
 @media (max-width: 1024px) {
-  .collapse-container__text {
+  .collapse-container__text,
+  .collapse-container-logement__text {
     font-size: 0.8em;
   }
 }

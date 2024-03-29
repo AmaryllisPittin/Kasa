@@ -1,0 +1,83 @@
+/***BREAKPOINT RESPONSIVE***/
+$breakpoint-desktop: 1024px;
+
+$main-margin: 7%;
+$zero-value: 0;
+$minimal-px: 5px;
+
+
+.collapse-container {
+    margin-bottom:30px;
+    @media (max-width: $breakpoint-desktop) {
+        margin-bottom:$zero-value;
+        margin-top:20px;
+    }
+    &__presentation {
+        width:88%;
+        max-width: 1230px;
+        border-radius: $minimal-px;
+        height:$zero-value;
+        @media (max-width: $breakpoint-desktop) {
+            width:82%;
+            padding-left:15px;
+            padding-right:15px;
+        }
+    }
+    &__text {
+        padding-left:18px;
+        padding-right:10px;
+    }
+}
+
+
+.collapse-label .collapse-container__presentation {
+    width:90%;
+}
+
+.collapse-container__dimensions {
+    width:100%;
+}
+
+.collapse-security-margin-bottom {
+    @media (max-width: $breakpoint-desktop) {
+        margin-bottom:20px;
+    }
+}
+
+.collapse {
+    max-width:1230px;
+    height:50px;
+    padding-left:15px;
+    border-radius:$minimal-px;
+    @media (max-width: $breakpoint-desktop) {
+        width:95%;
+        height:30px;
+    }
+
+    &__chevron {
+        right:20px;
+        top:12px;
+        @media (max-width: $breakpoint-desktop) {
+            top:4px;
+            right:8px;
+            
+        }
+    }
+}
+
+.collapse-container-about {
+    width:800px;
+}
+
+.collapse-about {
+    width:88%;
+    margin-left:6%;
+    margin-right:6%;
+}
+
+.collapse-label {
+    width:100%;
+    @media (max-width: $breakpoint-desktop) {
+        width:100%;
+    }
+}

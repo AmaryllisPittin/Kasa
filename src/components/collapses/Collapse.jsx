@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import '../../style/collapse-logements.css'
 
-const Collapse = ({ title, text, id, equipments, isEquipement, isAbout = false }) => { // isAbout = false indique une valeur par défaut
+const Collapse = ({ title, text, id, equipments, isEquipement }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const chevronClass = isCollapsed ? '' : 'rotated';
   const contentRef = useRef(null);
@@ -14,19 +15,19 @@ const Collapse = ({ title, text, id, equipments, isEquipement, isAbout = false }
     }
   };
 
-  const containerClass = isAbout ? 'collapse-container-about' : 'collapse-container';
+  const containerClass = 'collapse-container-logement';
 
   return (
     <div className={containerClass} onClick={toggleCollapse}>
   <input type="checkbox" id={id} className={`collapse__checkbox ${chevronClass} visually-hidden`} />
-  <label htmlFor={id} className="collapse collapse-label">
+  <label htmlFor={id} className="collapse-title-container collapse-label-logement">
     {title}
     <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
   </label>
   <div className="collapse-container__dimensions" onClick={(e) => e.stopPropagation()}>
-    <div ref={contentRef} className={`collapse-container__presentation ${isCollapsed ? '' : 'open'}`} style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }}>
+    <div ref={contentRef} className={`collapse-container-logement__presentation ${isCollapsed ? '' : 'open'}`} style={{ height: isCollapsed ? '0' : `${contentRef.current.scrollHeight}px` }}>
       {isEquipement ? (
-        <div className="collapse-container__text">
+        <div className="collapse-container-logement__text">
           {equipments &&
             equipments.map((equipment, index) => (
               <div key={index} className="equipment">
@@ -35,7 +36,7 @@ const Collapse = ({ title, text, id, equipments, isEquipement, isAbout = false }
             ))}
         </div>
       ) : (
-        <p className="collapse-container__text">{text}</p>
+        <p className="collapse-container-logement__text">{text}</p>
       )}
     </div>
   </div>

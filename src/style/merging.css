@@ -2,6 +2,7 @@
 /**MERGING VALUES**/
 /***POSITIONS***/
 .collapse,
+.collapse-title-container,
 #slideshow,
 .collapse-container__description,
 .collapse-container__equipment,
@@ -26,7 +27,7 @@
 }
 
 .collapse-container__presentation,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .collapse-container__description,
 .collapse-container__equipment,
 .header-banner {
@@ -45,8 +46,11 @@
 }
 
 /***ALIGN-ITEMS***/
+.all-collapse-container,
 .collapse-container,
+.collapse-container-logement,
 .collapse,
+.collapse-title-container,
 #slideshow,
 .profile,
 .body-error,
@@ -60,6 +64,12 @@
 .footer,
 .header-banner {
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .collapse-logement {
+    align-items: center;
+  }
 }
 
 /***TEXT-ALIGN***/
@@ -103,6 +113,7 @@
 
 .about-page,
 .collapse-container,
+.collapse-container-logement,
 .all-collapse-container,
 .title-and-location,
 .profile-and-stars-container,
@@ -161,7 +172,8 @@
   }
 }
 
-.collapse {
+.collapse,
+.collapse-title-container {
   text-align: left;
   display: flex;
 }

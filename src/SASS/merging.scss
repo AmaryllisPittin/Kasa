@@ -31,6 +31,7 @@ $second-z-index:2;
 /***POSITIONS***/
 
 .collapse,
+.collapse-title-container,
 #slideshow,
 .collapse-container__description,
 .collapse-container__equipment,
@@ -55,7 +56,7 @@ $second-z-index:2;
 }
 
 .collapse-container__presentation,
-.collapse-container__presentation-logement,
+.collapse-container-logement__presentation,
 .collapse-container__description,
 .collapse-container__equipment,
 .header-banner {
@@ -75,8 +76,11 @@ $second-z-index:2;
 
 /***ALIGN-ITEMS***/
 
+.all-collapse-container,
 .collapse-container,
+.collapse-container-logement,
 .collapse,
+.collapse-title-container,
 #slideshow,
 .profile,
 .body-error,
@@ -91,6 +95,12 @@ $second-z-index:2;
 .footer,
 .header-banner {
     justify-content: $center-value;
+}
+
+.collapse-logement {
+    @media (max-width: $breakpoint-desktop) {
+        align-items:$center-value;
+    }
 }
 
 /***TEXT-ALIGN***/
@@ -133,6 +143,7 @@ $second-z-index:2;
 
 .about-page,
 .collapse-container,
+.collapse-container-logement,
 .all-collapse-container,
 .title-and-location,
 .profile-and-stars-container,
@@ -188,7 +199,8 @@ $second-z-index:2;
     }
 }
 
-.collapse {
+.collapse,
+.collapse-title-container {
     text-align:left;
     display:flex;
 }
