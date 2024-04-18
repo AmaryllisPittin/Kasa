@@ -6,6 +6,7 @@
   transform: rotate(-180deg);
 }
 
+.collapse-container,
 .collapse-container__description,
 .collapse-container__equipment,
 .collapse-container__presentation,
