@@ -53,6 +53,8 @@ $minimal-px: 5px;
 
 .collapse-label-logement .collapse-container-logement__presentation {
     width:90%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .collapse-container__dimensions {
@@ -99,7 +101,9 @@ $minimal-px: 5px;
     max-width:1230px;
     height:50px;
     padding-left:15px;
+    padding-right:15px;
     border-radius:$minimal-px;
+    
     @media (max-width: $breakpoint-desktop) {
         width:95%;
         height:30px;
@@ -135,6 +139,10 @@ $minimal-px: 5px;
 
 .collapse-label-logement {
     width:100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
     @media (max-width: $breakpoint-desktop) {
         width:100%;
     }

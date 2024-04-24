@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import BannerAbout from "../components/banners/BannerAbout";
 import Footer from "../components/Footer";
-import CollapseAbout from "../components/collapses/CollapseAbout"
+import Collapse from "../components/collapses/Collapse";
 
 const ReliabilityText = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.";
 const RespectText = "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.";
@@ -15,10 +15,10 @@ const About = () => {
         <Navigation />
         <BannerAbout />
         <div className="all-collapse-container">
-          <CollapseAbout title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
-          <CollapseAbout title="Respect" text={RespectText} id="collapseCheckboxRespect" />
-          <CollapseAbout title="Service" text={ServiceText} id="collapseCheckboxService" />
-          <CollapseAbout title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
+          <Collapse title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
+          <Collapse title="Respect" text={RespectText} id="collapseCheckboxRespect" />
+          <Collapse title="Service" text={ServiceText} id="collapseCheckboxService" />
+          <Collapse title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
       </div>
       <Footer />
     </div>

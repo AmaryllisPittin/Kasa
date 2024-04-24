@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import '../../style/collapse-logements.css'
+import '../../sass/collapse.scss'
 
 const Collapse = ({ title, text, id, equipments, isEquipement }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -19,9 +19,8 @@ const Collapse = ({ title, text, id, equipments, isEquipement }) => {
 
   return (
     <div className={containerClass} onClick={toggleCollapse}>
-  <input type="checkbox" id={id} className={`collapse__checkbox ${chevronClass} visually-hidden`} />
   <label htmlFor={id} className="collapse-title-container collapse-label-logement">
-    {title}
+    <span>{title}</span>
     <FontAwesomeIcon icon={faChevronUp} className={`collapse__chevron ${chevronClass}`} />
   </label>
   <div className="collapse-container__dimensions" onClick={(e) => e.stopPropagation()}>
@@ -46,3 +45,4 @@ const Collapse = ({ title, text, id, equipments, isEquipement }) => {
 };
 
 export default Collapse;
+
