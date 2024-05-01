@@ -21,6 +21,7 @@ $minimal-px: 5px;
 
 .collapse-container-logement {
     margin-bottom:30px;
+    width:88%;
     @media (max-width: $breakpoint-desktop) {
         margin-bottom:$zero-value;
         margin-top:20px;

@@ -15,7 +15,7 @@ const About = () => {
         <Navigation />
         <BannerAbout />
         <div className="all-collapse-container">
-          <Collapse title="Reliability" text={ReliabilityText} id="collapseCheckboxReliability" />
+          <Collapse title="Fiabilité" text={ReliabilityText} id="collapseCheckboxReliability" />
           <Collapse title="Respect" text={RespectText} id="collapseCheckboxRespect" />
           <Collapse title="Service" text={ServiceText} id="collapseCheckboxService" />
           <Collapse title="Sécurité" text={SecurityText} id="collapseCheckboxSecurity" />
