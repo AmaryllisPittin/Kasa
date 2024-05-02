@@ -14,6 +14,11 @@ $minimal-px: 5px;
     }
 }
 
+.all-collapse-container {
+    width: 88%;
+    margin-left: 6%;
+}
+
 .collapse-container__description,
 .collapse-container__equipment {
     width:$fourth-width;
@@ -21,7 +26,6 @@ $minimal-px: 5px;
 
 .collapse-container-logement {
     margin-bottom:30px;
-    width:88%;
     @media (max-width: $breakpoint-desktop) {
         margin-bottom:$zero-value;
         margin-top:20px;
