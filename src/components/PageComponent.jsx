@@ -12,7 +12,6 @@ import NotFound from "./NotFound";
 const PageComponent = () => {
   const { id } = useParams();
   const item = dataTab.find((item) => item.id === id);
-  const picturesData = dataTab.find((picturesData) => picturesData.id === id);
 
   if (!item) {
     return <NotFound />;
@@ -22,7 +21,7 @@ const PageComponent = () => {
     <div>
       <Navigation />
       <div className="main">
-        <Slideshow parentId={id} picturesData={picturesData} />
+        <Slideshow parentId={id} picturesData={item} />
         <div className="logement-page-presentation">
           <div className="title-and-location">
             <h1 className="title-and-location__h1">{item.title}</h1>
@@ -32,7 +31,7 @@ const PageComponent = () => {
           <div className="profile-and-stars-container">
             <div className="profile">
               {item.host.name}
-              <img src={item.host.picture} alt="Image de l'hôte" className="profile__img" />
+              <img src={item.host.picture} alt="hôte" className="profile__img" />
             </div>
             <div className="rating">
               <StarRating rating={item.rating} />

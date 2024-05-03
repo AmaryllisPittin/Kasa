@@ -19,22 +19,30 @@ const Slideshow = () => {
 
     return (
         <div id="slideshow">
-            <button className={`slideshow-arrow arrow-left`}>
-                <FontAwesomeIcon icon={faChevronLeft} onClick={() => changeDataTab('left')} />
-            </button>
-            <button className={`slideshow-arrow arrow-right`} >
-                <FontAwesomeIcon icon={faChevronRight} onClick={() => changeDataTab('right')} />
-            </button>
+            {picturesData.length >= 2 && (
+                <>
+                    <button className={`slideshow-arrow arrow-left`}>
+                        <FontAwesomeIcon icon={faChevronLeft} onClick={() => changeDataTab('left')} />
+                    </button>
+                    <button className={`slideshow-arrow arrow-right`} >
+                        <FontAwesomeIcon icon={faChevronRight} onClick={() => changeDataTab('right')} />
+                    </button>
+                </>
+            )}
+
+            {picturesData.length >= 2 && (
+                <div className="img-numbers">
+                    {currentIndex + 1} / {picturesData.length}
+                </div>
+            )}
 
             <div className="banner__all-img banner-img">
                 {picturesData.length > 0 && <img src={picturesData[currentIndex % picturesData.length]} alt={`DataTab ${currentIndex + 1}`} className="banner-img" />}
-            </div>
-            <div className="img-numbers">
-                {currentIndex + 1} / {picturesData.length}
             </div>
         </div>
     );
 };
 
 export default Slideshow;
+
 

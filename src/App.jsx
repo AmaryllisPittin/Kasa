@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import dataTab from "./data.json";
 import PageComponent from "./components/PageComponent";
 import Index from "./pages/Index";
@@ -14,8 +14,8 @@ const App = () => {
         <Route path="/a-propos" element={<About />} />
 
         <Route path="/logement/:id" element={<PageComponent data={dataTab} />} />
-
-        <Route path="*" element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
       </Routes>
     </Router>
   );
